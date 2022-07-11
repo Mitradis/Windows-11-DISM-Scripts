@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+; Брандмауэр Защитника Windows
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\mpssvc]
+"Start"=dword:00000002
+; Служба установки Microsoft Store
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\InstallService]
+"Start"=dword:00000003

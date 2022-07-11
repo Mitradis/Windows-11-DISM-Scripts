@@ -1,0 +1,384 @@
+Windows Registry Editor Version 5.00
+; UpdateOrchestrator
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Update\TargetingInfo\DynamicInstalled\Hammer.amd64]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Update\TargetingInfo\DynamicInstalled\MSRT.amd64]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Update\TargetingInfo\DynamicInstalled\SedimentPack.amd64]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Update\TargetingInfo\DynamicInstalled\UUS.amd64]
+; SysMain
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\SysMain]
+"Start"=dword:00000004
+; Windows Search
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\WSearch]
+"Start"=dword:00000004
+; Xbox Accessory Management Service
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\XboxGipSvc]
+"Start"=dword:00000004
+; Адаптер производительности WMI
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\wmiApSrv]
+"Start"=dword:00000004
+; Брандмауэр Защитника Windows
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\mpssvc]
+"Start"=dword:00000004
+; Диспетчер подключений удаленного доступа
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\RasMan]
+"Start"=dword:00000004
+; Диспетчер скачанных карт
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\MapsBroker]
+"Start"=dword:00000004
+; Журнал событий Windows
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\EventLog]
+"Start"=dword:00000002
+; Клиент отслеживания изменившихся связей
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\TrkWks]
+"Start"=dword:00000004
+; Оптимизация дисков
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\defragsvc]
+"Start"=dword:00000004
+; Оптимизация доставки
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\DoSvc]
+"Start"=dword:00000004
+; Сетевая служба Xbox Live
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\XboxNetApiSvc]
+"Start"=dword:00000004
+; Служба PushToInstall Windows
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\PushToInstall]
+"Start"=dword:00000004
+; Служба времени Windows
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\W32Time]
+"Start"=dword:00000004
+; Служба географического положения
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\lfsvc]
+"Start"=dword:00000004
+; Служба демонстрации магазина
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\RetailDemo]
+"Start"=dword:00000004
+; Служба истории файлов
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\fhsvc]
+"Start"=dword:00000004
+; Служба кошелька
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\WalletService]
+"Start"=dword:00000004
+; Служба оркестратора обновлений
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\UsoSvc]
+"Start"=dword:00000004
+; Служба помощника по совместимости программ
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\PcaSvc]
+"Start"=dword:00000004
+; Служба предварительной оценки Windows
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\wisvc]
+"Start"=dword:00000004
+; Служба регистрации ошибок Windows
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\WerSvc]
+"Start"=dword:00000004
+; Служба регистрации управления устройством
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\DmEnrollmentSvc]
+"Start"=dword:00000004
+; Служба сенсорной клавиатуры и панели рукописного ввода
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\TabletInputService]
+"Start"=dword:00000004
+; Служба системы push-уведомлений Windows
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\WpnService]
+"Start"=dword:00000004
+; Служба удаленного управления Windows (WS-Management)
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\WinRM]
+"Start"=dword:00000004
+; Служба управления радио
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\RmSvc]
+"Start"=dword:00000004
+; Служба установки Microsoft Store
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\InstallService]
+"Start"=dword:00000004
+; Служба хранилища
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\StorSvc]
+"Start"=dword:00000004
+; Сохранение игр на Xbox Live
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\XblGameSave]
+"Start"=dword:00000004
+; Узел системы диагностики
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\WdiSystemHost]
+"Start"=dword:00000004
+; Узел службы диагностики
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\WdiServiceHost]
+"Start"=dword:00000004
+; Фоновая интеллектуальная служба передачи
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\BITS]
+"Start"=dword:00000004
+; Функциональные возможности для подключенных пользователей и телеметрия
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\DiagTrack]
+"Start"=dword:00000004
+; Центр обновления Windows
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\wuauserv]
+"Start"=dword:00000004
+; Отключение Swapfile
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
+"SwapfileControl"=dword:00000000
+; Требовать выполнение входа с помощью Windows Hello
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PasswordLess\Device]
+"DevicePasswordLessBuildVersion"=dword:00000000
+; Классический проводник
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked]
+"{e2bf9676-5f8f-435c-97eb-11607a5bedf7}"=""
+; Open in Windows Terminal
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked]
+"{9F156763-7844-4DC4-B2B1-901F640F5155}"=""
+; Передать на устройство
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked]
+"{7AD84985-87B4-4a16-BE58-8B72A5B390F7}"=""
+; Разрешить подключение удаленного помощника
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Remote Assistance]
+"fAllowToGetHelp"=dword:00000000
+; Разрешить установку приложений из любого источника
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock]
+"AllowDevelopmentWithoutDevLicense"=dword:00000001
+; Отключение автоматической синхронизации времени
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters]
+"Type"="NoSync"
+; Элементы Этот Компьютер. Загрузки
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{088e3905-0323-4b02-9826-5d99428e115f}]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{088e3905-0323-4b02-9826-5d99428e115f}]
+; Изображения
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{24ad3ad4-a569-4530-98e1-ab02f9417aa8}]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{24ad3ad4-a569-4530-98e1-ab02f9417aa8}]
+; Музыка
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{3dfdf296-dbec-4fb4-81d1-6a3438bcf4de}]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{3dfdf296-dbec-4fb4-81d1-6a3438bcf4de}]
+; Видео
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{f86fa3ab-70d2-4fc7-9c99-fcbf05467f3a}]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{f86fa3ab-70d2-4fc7-9c99-fcbf05467f3a}]
+; Контекстное меню. Закрепить на панели задач
+[-HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\{90AA3A4E-1CBA-4233-B8BB-535773D48449}]
+[-HKEY_CLASSES_ROOT\Application.Reference\shellex\ContextMenuHandlers\{90AA3A4E-1CBA-4233-B8BB-535773D48449}]
+[-HKEY_CLASSES_ROOT\IE.AssocFile.WEBSITE\ShellEx\ContextMenuHandlers\{90AA3A4E-1CBA-4233-B8BB-535773D48449}]
+[-HKEY_CLASSES_ROOT\Launcher.AllAppsDesktopApplication\shellex\ContextMenuHandlers\{90AA3A4E-1CBA-4233-B8BB-535773D48449}]
+[-HKEY_CLASSES_ROOT\Launcher.DesktopPackagedApplication\shellex\ContextMenuHandlers\{90AA3A4E-1CBA-4233-B8BB-535773D48449}]
+[-HKEY_CLASSES_ROOT\Launcher.ImmersiveApplication\shellex\ContextMenuHandlers\{90AA3A4E-1CBA-4233-B8BB-535773D48449}]
+[-HKEY_CLASSES_ROOT\Launcher.SystemSettings\shellex\ContextMenuHandlers\{90AA3A4E-1CBA-4233-B8BB-535773D48449}]
+[-HKEY_CLASSES_ROOT\Microsoft.Website\shellex\ContextMenuHandlers\{90AA3A4E-1CBA-4233-B8BB-535773D48449}]
+[-HKEY_CLASSES_ROOT\MSILink\shellex\ContextMenuHandlers\{90AA3A4E-1CBA-4233-B8BB-535773D48449}]
+; Закрепить на начальном экране
+[-HKEY_CLASSES_ROOT\exefile\shellex\ContextMenuHandlers\PintoStartScreen]
+[-HKEY_CLASSES_ROOT\Folder\shellex\ContextMenuHandlers\PintoStartScreen]
+[-HKEY_CLASSES_ROOT\Launcher.AllAppsDesktopApplication\shellex\ContextMenuHandlers\PintoStartScreen]
+[-HKEY_CLASSES_ROOT\Launcher.Computer\shellex\ContextMenuHandlers\PintoStartScreen]
+[-HKEY_CLASSES_ROOT\Launcher.DesktopPackagedApplication\shellex\ContextMenuHandlers\PintoStartScreen]
+[-HKEY_CLASSES_ROOT\Launcher.DualModeApplication\shellex\ContextMenuHandlers\PintoStartScreen]
+[-HKEY_CLASSES_ROOT\Launcher.ImmersiveApplication\shellex\ContextMenuHandlers\PintoStartScreen]
+[-HKEY_CLASSES_ROOT\Launcher.SystemSettings\shellex\ContextMenuHandlers\PintoStartScreen]
+[-HKEY_CLASSES_ROOT\Microsoft.Website\shellex\ContextMenuHandlers\PintoStartScreen]
+[-HKEY_CLASSES_ROOT\mscfile\shellex\ContextMenuHandlers\PintoStartScreen]
+; Закрепить на панели быстрого доступа
+[-HKEY_CLASSES_ROOT\Folder\shell\pintohome]
+; Исправление проблем с совместимостью
+[-HKEY_CLASSES_ROOT\batfile\shellex\ContextMenuHandlers\Compatibility]
+[-HKEY_CLASSES_ROOT\cmdfile\shellex\ContextMenuHandlers\Compatibility]
+[-HKEY_CLASSES_ROOT\exefile\shellex\ContextMenuHandlers\Compatibility]
+[-HKEY_CLASSES_ROOT\Msi.Package\shellex\ContextMenuHandlers\Compatibility]
+; Отправить
+[-HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\ModernSharing]
+[-HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\SendTo]
+; Предоставить доступ к
+[-HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\Sharing]
+[-HKEY_CLASSES_ROOT\Directory\background\shellex\ContextMenuHandlers\Sharing]
+[-HKEY_CLASSES_ROOT\Directory\shellex\ContextMenuHandlers\Sharing]
+[-HKEY_CLASSES_ROOT\Directory\shellex\PropertySheetHandlers\Sharing]
+[-HKEY_CLASSES_ROOT\Drive\shellex\ContextMenuHandlers\Sharing]
+[-HKEY_CLASSES_ROOT\Drive\shellex\PropertySheetHandlers\Sharing]
+[-HKEY_CLASSES_ROOT\LibraryFolder\background\shellex\ContextMenuHandlers\Sharing]
+[-HKEY_CLASSES_ROOT\UserLibraryFolder\shellex\ContextMenuHandlers\Sharing]
+; Добавить в библиотеку
+[-HKEY_CLASSES_ROOT\Folder\shellex\ContextMenuHandlers\Library Location]
+; Управление изображением
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.avci\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.avif\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.bmp\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.dds\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.dib\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.gif\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.heic\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.heif\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.hif\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.ico\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.jfif\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.jpe\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.jpeg\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.jpg\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.jxr\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.png\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.rle\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.tif\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.tiff\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.wdp\ShellEx\ContextMenuHandlers\ShellImagePreview]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\.webp\ShellEx\ContextMenuHandlers\ShellImagePreview]
+; Windows Media Player
+[-HKEY_CLASSES_ROOT\Stack.Audio\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\Stack.Audio\shell\Play]
+[-HKEY_CLASSES_ROOT\Stack.Audio\shellex\ContextMenuHandlers\PlayTo]
+[-HKEY_CLASSES_ROOT\Stack.Image\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\Stack.Image\shell\Play]
+[-HKEY_CLASSES_ROOT\Stack.Image\shellex\ContextMenuHandlers\PlayTo]
+[-HKEY_CLASSES_ROOT\Stack.Video\shellex\ContextMenuHandlers\PlayTo]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\audio\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\audio\shell\Play]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\audio\shellex\ContextMenuHandlers\PlayTo]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\Directory.Audio\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\Directory.Audio\shell\Play]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\Directory.Audio\shellex\ContextMenuHandlers\PlayTo]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\Directory.Image\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\Directory.Image\shell\Play]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\Directory.Image\shellex\ContextMenuHandlers\PlayTo]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\Directory.Video\shellex\ContextMenuHandlers\PlayTo]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\image\ShellEx\ContextMenuHandlers\PlayTo]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations\video\shellex\ContextMenuHandlers\PlayTo]
+[-HKEY_CLASSES_ROOT\MediaCenter.WTVFile\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP.DVR-MSFile\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP.WTVFile\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.3G2\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.3GP\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.ADTS\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.AIFF\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.ASF\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.ASX\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.AU\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.AVI\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.FLAC\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.M2TS\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.M3U\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.M4A\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.MIDI\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.MK3D\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.MKA\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.MKV\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.MOV\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.MP3\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.MP4\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.MPEG\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.TTS\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.WAV\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.WAX\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.WMA\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.WMV\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.WPL\shell\Enqueue]
+[-HKEY_CLASSES_ROOT\WMP11.AssocFile.WVX\shell\Enqueue]
+; Восстановление Блокнота
+[HKEY_CLASSES_ROOT\Applications\notepad.exe]
+"NoOpenWith"=-
+[HKEY_CLASSES_ROOT\txtfilelegacy]
+"EditFlags"=dword:00210000
+"FriendlyTypeName"=hex(2):40,00,25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,\
+  00,6f,00,6f,00,74,00,25,00,5c,00,73,00,79,00,73,00,74,00,65,00,6d,00,33,00,\
+  32,00,5c,00,6e,00,6f,00,74,00,65,00,70,00,61,00,64,00,2e,00,65,00,78,00,65,\
+  00,2c,00,2d,00,34,00,36,00,39,00,00,00
+[HKEY_CLASSES_ROOT\txtfilelegacy\DefaultIcon]
+@=hex(2):25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,\
+  00,5c,00,73,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,69,00,6d,00,\
+  61,00,67,00,65,00,72,00,65,00,73,00,2e,00,64,00,6c,00,6c,00,2c,00,2d,00,31,\
+  00,30,00,32,00,00,00
+[HKEY_CLASSES_ROOT\txtfilelegacy\shell\open\command]
+@=hex(2):25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,\
+  00,5c,00,73,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,4e,00,4f,00,\
+  54,00,45,00,50,00,41,00,44,00,2e,00,45,00,58,00,45,00,20,00,25,00,31,00,00,\
+  00
+[HKEY_CLASSES_ROOT\txtfilelegacy\shell\print]
+"LegacyDisable"=""
+[HKEY_CLASSES_ROOT\txtfilelegacy\shell\print\command]
+@=hex(2):25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,\
+  00,5c,00,73,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,4e,00,4f,00,\
+  54,00,45,00,50,00,41,00,44,00,2e,00,45,00,58,00,45,00,20,00,2f,00,70,00,20,\
+  00,25,00,31,00,00,00
+[HKEY_CLASSES_ROOT\txtfilelegacy\shell\printto]
+"LegacyDisable"=""
+[HKEY_CLASSES_ROOT\txtfilelegacy\shell\printto\command]
+@=hex(2):25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,\
+  00,5c,00,73,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,6e,00,6f,00,\
+  74,00,65,00,70,00,61,00,64,00,2e,00,65,00,78,00,65,00,20,00,2f,00,70,00,74,\
+  00,20,00,22,00,25,00,31,00,22,00,20,00,22,00,25,00,32,00,22,00,20,00,22,00,\
+  25,00,33,00,22,00,20,00,22,00,25,00,34,00,22,00,00,00
+[HKEY_CLASSES_ROOT\.dic]
+@="txtfilelegacy"
+"Content Type"="text/plain"
+"PerceivedType"="text"
+[HKEY_CLASSES_ROOT\.dic\PersistentHandler]
+@="{5e941d80-bf96-11cd-b579-08002b30bfeb}"
+[HKEY_CLASSES_ROOT\.ext]
+@="txtfilelegacy"
+"Content Type"="text/plain"
+"PerceivedType"="text"
+[HKEY_CLASSES_ROOT\.ext\PersistentHandler]
+@="{5e941d80-bf96-11cd-b579-08002b30bfeb}"
+[HKEY_CLASSES_ROOT\.log]
+@="txtfilelegacy"
+"Content Type"="text/plain"
+"PerceivedType"="text"
+[HKEY_CLASSES_ROOT\.log\PersistentHandler]
+@="{5e941d80-bf96-11cd-b579-08002b30bfeb}"
+[HKEY_CLASSES_ROOT\.scp]
+@="txtfilelegacy"
+"Content Type"="text/plain"
+"PerceivedType"="text"
+[HKEY_CLASSES_ROOT\.scp\PersistentHandler]
+@="{5e941d80-bf96-11cd-b579-08002b30bfeb}"
+[HKEY_CLASSES_ROOT\.wtx]
+@="txtfilelegacy"
+"Content Type"="text/plain"
+"PerceivedType"="text"
+[HKEY_CLASSES_ROOT\.wtx\PersistentHandler]
+@="{5e941d80-bf96-11cd-b579-08002b30bfeb}"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\notepad.exe]
+"UseFilter"=dword:00000000
+; Ассоциация для .ini файлов
+[HKEY_CLASSES_ROOT\.ini]
+@="inifile"
+[HKEY_CLASSES_ROOT\inifile]
+@="Configuration Settings"
+"EditFlags"=dword:00200000
+"FriendlyTypeName"="@shell32.dll,-10151"
+[HKEY_CLASSES_ROOT\inifile\DefaultIcon]
+@=hex(2):25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,\
+  00,5c,00,73,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,69,00,6d,00,\
+  61,00,67,00,65,00,72,00,65,00,73,00,2e,00,64,00,6c,00,6c,00,2c,00,2d,00,36,\
+  00,39,00,00,00
+[HKEY_CLASSES_ROOT\inifile\shell\open\command]
+@=hex(2):25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,\
+  00,5c,00,73,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,4e,00,4f,00,\
+  54,00,45,00,50,00,41,00,44,00,2e,00,45,00,58,00,45,00,20,00,25,00,31,00,00,\
+  00
+[HKEY_CLASSES_ROOT\inifile\shell\print]
+"LegacyDisable"=""
+[HKEY_CLASSES_ROOT\inifile\shell\print\command]
+@=hex(2):25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,\
+  00,5c,00,73,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,4e,00,4f,00,\
+  54,00,45,00,50,00,41,00,44,00,2e,00,45,00,58,00,45,00,20,00,2f,00,70,00,20,\
+  00,25,00,31,00,00,00
+; Ассоциация для .ps1 файлов
+[HKEY_CLASSES_ROOT\.ps1]
+@="Microsoft.PowerShellScript.1"
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1]
+"EditFlags"=dword:00020000
+"FriendlyTypeName"=hex(2):40,00,22,00,25,00,73,00,79,00,73,00,74,00,65,00,6d,\
+  00,72,00,6f,00,6f,00,74,00,25,00,5c,00,73,00,79,00,73,00,74,00,65,00,6d,00,\
+  33,00,32,00,5c,00,77,00,69,00,6e,00,64,00,6f,00,77,00,73,00,70,00,6f,00,77,\
+  00,65,00,72,00,73,00,68,00,65,00,6c,00,6c,00,5c,00,76,00,31,00,2e,00,30,00,\
+  5c,00,70,00,6f,00,77,00,65,00,72,00,73,00,68,00,65,00,6c,00,6c,00,2e,00,65,\
+  00,78,00,65,00,22,00,2c,00,2d,00,31,00,30,00,33,00,00,00
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\DefaultIcon]
+@="\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell_ise.exe\",1"
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell]
+@="Open"
+[HKEY_CLASSES_ROOT\Microsoft.PowerShellScript.1\Shell\Open\Command]
+@="\"C:\\Windows\\System32\\notepad.exe\" \"%1\""
+; Восстановление Просмотр фотографий Windows
+[HKEY_CLASSES_ROOT\Applications\photoviewer.dll\shell\open]
+"MuiVerb"="@%programfiles%\\Windows Photo Viewer\\photoviewer.dll,-3043"
+[HKEY_CLASSES_ROOT\Applications\photoviewer.dll\shell\open\command]
+@=hex(2):25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,\
+  00,5c,00,53,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,72,00,75,00,\
+  6e,00,64,00,6c,00,6c,00,33,00,32,00,2e,00,65,00,78,00,65,00,20,00,22,00,25,\
+  00,50,00,72,00,6f,00,67,00,72,00,61,00,6d,00,46,00,69,00,6c,00,65,00,73,00,\
+  25,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,20,00,50,00,68,00,6f,\
+  00,74,00,6f,00,20,00,56,00,69,00,65,00,77,00,65,00,72,00,5c,00,50,00,68,00,\
+  6f,00,74,00,6f,00,56,00,69,00,65,00,77,00,65,00,72,00,2e,00,64,00,6c,00,6c,\
+  00,22,00,2c,00,20,00,49,00,6d,00,61,00,67,00,65,00,56,00,69,00,65,00,77,00,\
+  5f,00,46,00,75,00,6c,00,6c,00,73,00,63,00,72,00,65,00,65,00,6e,00,20,00,25,\
+  00,31,00,00,00
+[HKEY_CLASSES_ROOT\Applications\photoviewer.dll\shell\open\DropTarget]
+"Clsid"="{FFE2A43C-56B9-4bf5-9A79-CC6D4285608A}"
