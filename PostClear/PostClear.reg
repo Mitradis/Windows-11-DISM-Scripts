@@ -125,6 +125,9 @@ Windows Registry Editor Version 5.00
 ; GameDVR
 [-HKEY_CURRENT_USER\System\GameConfigStore\Children]
 [-HKEY_CURRENT_USER\System\GameConfigStore\Parents]
+; Компактный вид проводника
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"UseCompactMode"=dword:00000001
 ; Ярлыки в виджете звука
 [HKEY_CURRENT_USER\Control Panel\Quick Actions\Control Center]
 "AppliedDefaultPins"=dword:00000001
