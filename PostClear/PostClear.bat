@@ -173,6 +173,7 @@ cscript %programdata%\PostClear\Shortcut.vbs "%programdata%\Microsoft\Windows\St
 cscript %programdata%\PostClear\Shortcut.vbs "%programdata%\Microsoft\Windows\Start Menu\Programs\System Tools\+ Перезапустить проводник.lnk" "%programdata%\PostClear\Shortcuts\RestartExplorer.bat"
 cscript %programdata%\PostClear\Shortcut.vbs "%programdata%\Microsoft\Windows\Start Menu\Programs\System Tools\+ Вкл. поддержку AppX.lnk" "%programdata%\PostClear\Shortcuts\AppxON.reg"
 cscript %programdata%\PostClear\Shortcut.vbs "%programdata%\Microsoft\Windows\Start Menu\Programs\System Tools\+ Выкл. поддержку AppX.lnk" "%programdata%\PostClear\Shortcuts\AppxOFF.reg"
+cscript %programdata%\PostClear\Shortcut.vbs "%programdata%\Microsoft\Windows\Start Menu\Programs\Accessories\Блокнот.lnk" "%windir%\system32\notepad.exe"
 cscript %programdata%\PostClear\Shortcut.vbs "%programdata%\Microsoft\Windows\Start Menu\Programs\Accessories\Калькулятор.lnk" "%windir%\System32\calc.exe"
 cscript %programdata%\PostClear\Shortcut.vbs "%programdata%\Microsoft\Windows\Start Menu\Programs\Microsoft Edge.lnk" "%programfiles(x86)%\Microsoft\Edge\Application\msedge.exe"
 rd /s /q "%programdata%\Microsoft\Windows\Start Menu\Programs\Start11"
