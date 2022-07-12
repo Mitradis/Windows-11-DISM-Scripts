@@ -47,7 +47,7 @@ del /f /q "%programfiles(x86)%\Stardock\Start11\Start10Shell32.dll"
 del /f /q "%programfiles(x86)%\Stardock\Start11\Start10Shell64.dll"
 title Editing .dll`s
 net stop AppXSvc
-set EDITLIST=%windir%\System32\AppXDeploymentExtensions.desktop.dll %windir%\System32\InputSwitch.dll %windir%\ImmersiveControlPanel\SystemSettings.dll
+set EDITLIST=%windir%\System32\AppXDeploymentExtensions.desktop.dll %windir%\System32\InputSwitch.dll
 for %%a in (%EDITLIST%) do (
 	takeown /f %%a
 	icacls %%a /grant "%username%":f /c /l /q
