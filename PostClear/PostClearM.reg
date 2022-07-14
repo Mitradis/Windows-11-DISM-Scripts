@@ -115,7 +115,7 @@ Windows Registry Editor Version 5.00
 ; Требовать выполнение входа с помощью Windows Hello
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PasswordLess\Device]
 "DevicePasswordLessBuildVersion"=dword:00000000
-; Размер для кеша иконок (16 МБ)
+; Размер для кеша иконок (8 МБ)
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
 "Max Cached Icons"="8192"
 ; Классический проводник
