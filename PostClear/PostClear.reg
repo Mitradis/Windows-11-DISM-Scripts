@@ -82,25 +82,6 @@ Windows Registry Editor Version 5.00
 ; Игры: Xbox Game Bar
 [HKEY_CURRENT_USER\Software\Microsoft\GameBar]
 "UseNexusForGameBarEnabled"=dword:00000000
-; Фоновые приложения
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications\Microsoft.SecHealthUI_8wekyb3d8bbwe]
-"DisabledByUser"=dword:00000000
-"Disabled"=dword:00000000
-"IgnoreBatterySaver"=dword:00000001
-"SleepDisabled"=dword:00000000
-"SleepIgnoreBatterySaver"=dword:00000000
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications\Microsoft.MicrosoftEdge_8wekyb3d8bbwe]
-"DisabledByUser"=dword:00000000
-"Disabled"=dword:00000000
-"IgnoreBatterySaver"=dword:00000001
-"SleepDisabled"=dword:00000000
-"SleepIgnoreBatterySaver"=dword:00000000
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications\windows.immersivecontrolpanel_cw5n1h2txyewy]
-"DisabledByUser"=dword:00000000
-"Disabled"=dword:00000000
-"IgnoreBatterySaver"=dword:00000001
-"SleepDisabled"=dword:00000000
-"SleepIgnoreBatterySaver"=dword:00000000
 ; Многозадачность: Только открытые окна
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 "MultiTaskingAltTabFilter"=dword:00000003
@@ -138,34 +119,6 @@ Windows Registry Editor Version 5.00
 "Microsoft.QuickAction.InputSwitcher"=hex(0):
 "Microsoft.QuickAction.Project"=hex(0):
 "Microsoft.QuickAction.QuietHours"=hex(0):
-; Проводник: свернуть ленту
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Ribbon]
-"MinimizedStateTabletModeOn"=dword:00000001
-"MinimizedStateTabletModeOff"=dword:00000000
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Ribbon]
-"QatItems"=hex:3c,73,69,71,3a,63,75,73,74,6f,6d,55,49,20,78,6d,6c,6e,73,3a,73,\
-  69,71,3d,22,68,74,74,70,3a,2f,2f,73,63,68,65,6d,61,73,2e,6d,69,63,72,6f,73,\
-  6f,66,74,2e,63,6f,6d,2f,77,69,6e,64,6f,77,73,2f,32,30,30,39,2f,72,69,62,62,\
-  6f,6e,2f,71,61,74,22,3e,3c,73,69,71,3a,72,69,62,62,6f,6e,20,6d,69,6e,69,6d,\
-  69,7a,65,64,3d,22,74,72,75,65,22,3e,3c,73,69,71,3a,71,61,74,20,70,6f,73,69,\
-  74,69,6f,6e,3d,22,30,22,3e,3c,73,69,71,3a,73,68,61,72,65,64,43,6f,6e,74,72,\
-  6f,6c,73,3e,3c,73,69,71,3a,63,6f,6e,74,72,6f,6c,20,69,64,51,3d,22,73,69,71,\
-  3a,31,36,31,32,38,22,20,76,69,73,69,62,6c,65,3d,22,66,61,6c,73,65,22,20,61,\
-  72,67,75,6d,65,6e,74,3d,22,30,22,20,2f,3e,3c,73,69,71,3a,63,6f,6e,74,72,6f,\
-  6c,20,69,64,51,3d,22,73,69,71,3a,31,36,31,32,39,22,20,76,69,73,69,62,6c,65,\
-  3d,22,66,61,6c,73,65,22,20,61,72,67,75,6d,65,6e,74,3d,22,30,22,20,2f,3e,3c,\
-  73,69,71,3a,63,6f,6e,74,72,6f,6c,20,69,64,51,3d,22,73,69,71,3a,31,32,33,35,\
-  32,22,20,76,69,73,69,62,6c,65,3d,22,66,61,6c,73,65,22,20,61,72,67,75,6d,65,\
-  6e,74,3d,22,30,22,20,2f,3e,3c,73,69,71,3a,63,6f,6e,74,72,6f,6c,20,69,64,51,\
-  3d,22,73,69,71,3a,31,32,33,38,34,22,20,76,69,73,69,62,6c,65,3d,22,74,72,75,\
-  65,22,20,61,72,67,75,6d,65,6e,74,3d,22,30,22,20,2f,3e,3c,73,69,71,3a,63,6f,\
-  6e,74,72,6f,6c,20,69,64,51,3d,22,73,69,71,3a,31,32,33,33,36,22,20,76,69,73,\
-  69,62,6c,65,3d,22,74,72,75,65,22,20,61,72,67,75,6d,65,6e,74,3d,22,30,22,20,\
-  2f,3e,3c,73,69,71,3a,63,6f,6e,74,72,6f,6c,20,69,64,51,3d,22,73,69,71,3a,31,\
-  32,33,35,37,22,20,76,69,73,69,62,6c,65,3d,22,66,61,6c,73,65,22,20,61,72,67,\
-  75,6d,65,6e,74,3d,22,30,22,20,2f,3e,3c,2f,73,69,71,3a,73,68,61,72,65,64,43,\
-  6f,6e,74,72,6f,6c,73,3e,3c,2f,73,69,71,3a,71,61,74,3e,3c,2f,73,69,71,3a,72,\
-  69,62,62,6f,6e,3e,3c,2f,73,69,71,3a,63,75,73,74,6f,6d,55,49,3e
 ; Оформление поиска по умолчанию. Для смешанных типов
 [HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell\{7FDE1A1E-8B31-49A5-93B8-6BE14CFA4943}]
 "Rev"=dword:00000005

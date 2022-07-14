@@ -45,19 +45,16 @@ net stop Start11
 taskkill /f /im Start11_64.exe
 del /f /q "%programfiles(x86)%\Stardock\Start11\Start10Shell32.dll"
 del /f /q "%programfiles(x86)%\Stardock\Start11\Start10Shell64.dll"
-title Editing .dll`s
-net stop AppXSvc
-set EDITLIST=%windir%\System32\AppXDeploymentExtensions.desktop.dll %windir%\System32\InputSwitch.dll
-for %%a in (%EDITLIST%) do (
-	takeown /f %%a
-	icacls %%a /grant "%username%":f /c /l /q
-	cscript %programdata%\PostClear\BytesReplacer.vbs %%a %%a.mod
-	if exist %%a.mod (
-		del /f /q %%a
-		move %%a.mod %%a
-		%windir%\System32\WindowsPowerShell\v1.0\Powershell.exe -executionpolicy remotesigned -Command "& Get-Acl -Path %windir%\System32\control.exe | Set-Acl -Path %%a"
-	)
+title Editing .dll
+set EDITDLL=%windir%\System32\InputSwitch.dll
+takeown /f %EDITDLL%
+icacls %EDITDLL% /grant "%username%":f /c /l /q
+cscript %programdata%\PostClear\BytesReplacer.vbs %EDITDLL% %EDITDLL%.mod
+if exist %EDITDLL%.mod (
+	del /f /q %EDITDLL%
+	move %EDITDLL%.mod %EDITDLL%
 )
+%windir%\System32\WindowsPowerShell\v1.0\Powershell.exe -executionpolicy remotesigned -Command "& Get-Acl -Path %windir%\System32\control.exe | Set-Acl -Path %EDITDLL%"
 title Deleting tasks
 schtasks /delete /tn Microsoft\XblGameSave\XblGameSaveTask /f
 schtasks /delete /tn "Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser" /f
