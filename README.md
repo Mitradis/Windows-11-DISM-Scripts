@@ -24,7 +24,7 @@ Image optimization by removing pre-installed junk packages, disabling update tas
 - The image is ready.
 - During the installation of this image, the Internet must be turned off until the system is automatically rebooted 2 times.
 
-＃ 應用：
+# 应用：
 - 必須擁有完整的管理員權限：計算機配置 - Windows 設置 - 安全設置 - 本地策略 - 安全選項 - 用戶帳戶控制：所有管理員在批准模式下運行 - 已禁用。
 - 要使用腳本，您需要映像、修訂和校驗和在腳本版本的描述中指明。
 - 必須安裝圖像。
