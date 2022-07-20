@@ -24,6 +24,10 @@ TIMEOUT /T 1 /NOBREAK >nul
 title Compress boot.wim
 start /w Z:\WimOptimize.exe Z:\boot.wim
 title Applying Clear.ps1
+dism /get-imageinfo /imagefile:Z:\install.wim /index:10
+if %ERRORLEVEL% EQU -1051328239 (
+	del /f /q Z:\EN.txt
+)
 %windir%\System32\WindowsPowerShell\v1.0\Powershell.exe -executionpolicy remotesigned -File Z:\Clear.ps1
 title Applying Clear.reg
 reg load HKEY_LOCAL_MACHINE\WIM_SOFTWARE Z:\Install\Windows\System32\config\SOFTWARE
@@ -101,8 +105,25 @@ icacls %DEL% /grant "%username%":f /c /l /q
 del /f /q %DEL%
 move Z:\calc.exe Z:\Install\Windows\System32
 %windir%\System32\WindowsPowerShell\v1.0\Powershell.exe -executionpolicy remotesigned -Command "& Get-Acl -Path Z:\Install\Windows\System32\control.exe | Set-Acl -Path %DEL%"
-copy Z:\calc.exe.ru.mui Z:\Install\Windows\System32\ru-RU\calc.exe.mui
-move Z:\calc.exe.ru.mui Z:\Install\Windows\SysWOW64\ru-RU
+if exist Z:\Install\Windows\en-US\explorer.exe.mui (
+	del /f /q Z:\EN.txt
+	del /f /q Z:\calc.exe.cn.mui
+	del /f /q Z:\calc.exe.ru.mui
+	copy Z:\calc.exe.en.mui Z:\Install\Windows\System32\en-US\calc.exe.mui
+	move Z:\calc.exe.en.mui Z:\Install\Windows\SysWOW64\en-US
+)
+if exist Z:\Install\Windows\zh-CN\explorer.exe.mui (
+	del /f /q Z:\calc.exe.en.mui
+	del /f /q Z:\calc.exe.ru.mui
+	copy Z:\calc.exe.cn.mui Z:\Install\Windows\System32\zh-CN\calc.exe.mui
+	move Z:\calc.exe.cn.mui Z:\Install\Windows\SysWOW64\zh-CN
+)
+if exist Z:\Install\Windows\ru-RU\explorer.exe.mui (
+	del /f /q Z:\calc.exe.en.mui
+	del /f /q Z:\calc.exe.cn.mui
+	copy Z:\calc.exe.ru.mui Z:\Install\Windows\System32\ru-RU\calc.exe.mui
+	move Z:\calc.exe.ru.mui Z:\Install\Windows\SysWOW64\ru-RU
+)
 set DEL=Z:\Install\Windows\WinSxS\amd64_microsoft-windows-calc_31bf3856ad364e35_10.0.22000.653_none_a505ccb19fff0960
 takeown /f %DEL%
 icacls %DEL% /grant "%username%":f /c /l /q

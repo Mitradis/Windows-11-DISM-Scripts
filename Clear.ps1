@@ -1,8 +1,23 @@
 # Remove all revisions except Pro
-dism /delete-image /imagefile:Z:\install.wim /index:5
-dism /delete-image /imagefile:Z:\install.wim /index:4
-dism /delete-image /imagefile:Z:\install.wim /index:2
-dism /delete-image /imagefile:Z:\install.wim /index:1
+if ([System.IO.File]::Exists("Z:\EN.txt"))
+{
+	dism /delete-image /imagefile:Z:\install.wim /index:10
+	dism /delete-image /imagefile:Z:\install.wim /index:9
+	dism /delete-image /imagefile:Z:\install.wim /index:8
+	dism /delete-image /imagefile:Z:\install.wim /index:7
+	dism /delete-image /imagefile:Z:\install.wim /index:6
+	dism /delete-image /imagefile:Z:\install.wim /index:4
+	dism /delete-image /imagefile:Z:\install.wim /index:3
+	dism /delete-image /imagefile:Z:\install.wim /index:2
+	dism /delete-image /imagefile:Z:\install.wim /index:1
+}
+else
+{
+	dism /delete-image /imagefile:Z:\install.wim /index:5
+	dism /delete-image /imagefile:Z:\install.wim /index:4
+	dism /delete-image /imagefile:Z:\install.wim /index:2
+	dism /delete-image /imagefile:Z:\install.wim /index:1
+}
 # Mounting
 mkdir Z:\Install
 dism /mount-image /imagefile:Z:\install.wim /index:1 /mountdir:Z:\Install
