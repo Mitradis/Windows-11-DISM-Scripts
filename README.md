@@ -14,7 +14,7 @@ Image optimization by removing pre-installed junk packages, disabling update tas
 - Must have full administrator rights: Computer Configuration - Windows Settings - Security Settings - Local Policies - Security Options - User Account Control: All Administrators Run in Approval Mode - Disabled.
 - To use scripts, you need an image, revision and checksums are specified in the description of script releases.
 - The image must be mounted.
-- You need any RAM disk with the letter Z (it's just the last letter of the alphabet), 11500MB in size with which DISM (SoftPerfect RAM Disk and analogues) can work.
+- You need any RAM disk with the letter Z (it's just the last letter of the alphabet), 12500MB in size with which DISM (SoftPerfect RAM Disk and analogues) can work.
 - Unpack the scripts, install.wim and boot.wim files (from the source folder of the .iso file) to the root of the RAM disk.
 - Download Start11 version 1.24 and place it in Z:\PostClear under the name Start11.exe (by default, the scripts are designed for repack from diakov.net for silent installation).
 - Run Clear.bat and wait for the window to close.
@@ -28,7 +28,7 @@ Image optimization by removing pre-installed junk packages, disabling update tas
 - 必須擁有完整的管理員權限：計算機配置 - Windows 設置 - 安全設置 - 本地策略 - 安全選項 - 用戶帳戶控制：所有管理員在批准模式下運行 - 已禁用。
 - 要使用腳本，您需要映像、修訂和校驗和在腳本版本的描述中指明。
 - 必須安裝圖像。
-- 您需要任何帶有字母 Z（它只是字母表的最後一個字母）的 RAM 磁盤，大小為 11500MB，DISM（SoftPerfect RAM 磁盤和類似物）可以使用。
+- 您需要任何帶有字母 Z（它只是字母表的最後一個字母）的 RAM 磁盤，大小為 12500MB，DISM（SoftPerfect RAM 磁盤和類似物）可以使用。
 - 將腳本、install.wim 和 boot.wim 文件（從 .iso 文件的源文件夾）解壓到 RAM 磁盤的根目錄。
 - 下載 Start11 版本 1.24 並將其放在 Z:\PostClear 中，名稱為 Start11.exe（默認情況下，腳本設計為從 diakov.net 重新打包以進行靜默安裝）。
 - 運行 Clear.bat 並等待窗口關閉。
@@ -42,7 +42,7 @@ Image optimization by removing pre-installed junk packages, disabling update tas
 - Должны быть полные права администратора: Конфигурация компьютера — Конфигурация Windows — Параметры безопасности — Локальные политики — Параметры безопасности — Контроль учетных записей: все администраторы работают в режиме одобрения — Отключено.
 - Для применения скриптов понадобиться образ, редакция и контрольные суммы указаны в описании релизов скриптов.
 - Образ должен быть смонтирован.
-- Понадобиться любой RAM диск, с буквой Z (просто это последняя буква алфавита), размером 11500МБ с которым может работать DISM (SoftPerfect RAM Disk и аналоги).
+- Понадобиться любой RAM диск, с буквой Z (просто это последняя буква алфавита), размером 12500МБ с которым может работать DISM (SoftPerfect RAM Disk и аналоги).
 - Распаковать скрипты, файлы install.wim и boot.wim (из папки source файла .iso) в корень RAM диска.
 - Скачать Start11 версии 1.24 и поместить его в Z:\PostClear под именем Start11.exe (по умолчанию скрипты рассчитаны на репак от diakov.net для тихой установки).
 - Запустить Clear.bat и ожидать завершение работы окна.
