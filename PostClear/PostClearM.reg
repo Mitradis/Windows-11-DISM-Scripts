@@ -16,18 +16,12 @@ Windows Registry Editor Version 5.00
 ; Адаптер производительности WMI
 [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\wmiApSrv]
 "Start"=dword:00000004
-; Брандмауэр Защитника Windows
-[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\mpssvc]
-"Start"=dword:00000004
 ; Диспетчер подключений удаленного доступа
 [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\RasMan]
 "Start"=dword:00000004
 ; Диспетчер скачанных карт
 [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\MapsBroker]
 "Start"=dword:00000004
-; Журнал событий Windows
-[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\EventLog]
-"Start"=dword:00000002
 ; Клиент отслеживания изменившихся связей
 [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\TrkWks]
 "Start"=dword:00000004
@@ -73,9 +67,6 @@ Windows Registry Editor Version 5.00
 ; Служба регистрации управления устройством
 [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\DmEnrollmentSvc]
 "Start"=dword:00000004
-; Служба сенсорной клавиатуры и панели рукописного ввода
-[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\TabletInputService]
-"Start"=dword:00000004
 ; Служба системы push-уведомлений Windows
 [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\WpnService]
 "Start"=dword:00000004
@@ -84,9 +75,6 @@ Windows Registry Editor Version 5.00
 "Start"=dword:00000004
 ; Служба управления радио
 [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\RmSvc]
-"Start"=dword:00000004
-; Служба установки Microsoft Store
-[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\InstallService]
 "Start"=dword:00000004
 ; Служба хранилища
 [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\StorSvc]
@@ -115,12 +103,22 @@ Windows Registry Editor Version 5.00
 ; Требовать выполнение входа с помощью Windows Hello
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PasswordLess\Device]
 "DevicePasswordLessBuildVersion"=dword:00000000
+; Максимальный размер и запрет перезаписи
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\EventLog\Application]
+"MaxSize"=dword:00100000
+"Retention"=dword:ffffffff
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\EventLog\Security]
+"MaxSize"=dword:00100000
+"Retention"=dword:ffffffff
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\EventLog\System]
+"MaxSize"=dword:00080000
+"Retention"=dword:ffffffff
 ; Размер для кеша иконок (8 МБ)
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
 "Max Cached Icons"="8192"
-; Классический проводник
+; EPP (Defender)
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked]
-"{e2bf9676-5f8f-435c-97eb-11607a5bedf7}"=""
+"{09A47860-11B0-4DA5-AFA5-26D86198A780}"=""
 ; Open in Windows Terminal
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked]
 "{9F156763-7844-4DC4-B2B1-901F640F5155}"=""
@@ -136,18 +134,9 @@ Windows Registry Editor Version 5.00
 ; Отключение автоматической синхронизации времени
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters]
 "Type"="NoSync"
-; Элементы Этот Компьютер. Загрузки
-[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{088e3905-0323-4b02-9826-5d99428e115f}]
-[-HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{088e3905-0323-4b02-9826-5d99428e115f}]
-; Изображения
-[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{24ad3ad4-a569-4530-98e1-ab02f9417aa8}]
-[-HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{24ad3ad4-a569-4530-98e1-ab02f9417aa8}]
-; Музыка
-[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{3dfdf296-dbec-4fb4-81d1-6a3438bcf4de}]
-[-HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{3dfdf296-dbec-4fb4-81d1-6a3438bcf4de}]
-; Видео
-[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{f86fa3ab-70d2-4fc7-9c99-fcbf05467f3a}]
-[-HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{f86fa3ab-70d2-4fc7-9c99-fcbf05467f3a}]
+; Disable Edge Acceleration
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge]
+"HardwareAccelerationModeEnabled"=dword:00000000
 ; Контекстное меню. Закрепить на панели задач
 [-HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\{90AA3A4E-1CBA-4233-B8BB-535773D48449}]
 [-HKEY_CLASSES_ROOT\Application.Reference\shellex\ContextMenuHandlers\{90AA3A4E-1CBA-4233-B8BB-535773D48449}]
@@ -183,11 +172,11 @@ Windows Registry Editor Version 5.00
 [-HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\Sharing]
 [-HKEY_CLASSES_ROOT\Directory\background\shellex\ContextMenuHandlers\Sharing]
 [-HKEY_CLASSES_ROOT\Directory\shellex\ContextMenuHandlers\Sharing]
-[-HKEY_CLASSES_ROOT\Directory\shellex\PropertySheetHandlers\Sharing]
 [-HKEY_CLASSES_ROOT\Drive\shellex\ContextMenuHandlers\Sharing]
-[-HKEY_CLASSES_ROOT\Drive\shellex\PropertySheetHandlers\Sharing]
 [-HKEY_CLASSES_ROOT\LibraryFolder\background\shellex\ContextMenuHandlers\Sharing]
 [-HKEY_CLASSES_ROOT\UserLibraryFolder\shellex\ContextMenuHandlers\Sharing]
+; Добавить в избранное
+[-HKEY_CLASSES_ROOT\*\shell\pintohomefile]
 ; Добавить в библиотеку
 [-HKEY_CLASSES_ROOT\Folder\shellex\ContextMenuHandlers\Library Location]
 ; Управление изображением

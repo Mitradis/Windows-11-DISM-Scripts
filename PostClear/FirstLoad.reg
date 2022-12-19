@@ -2,9 +2,6 @@ Windows Registry Editor Version 5.00
 ; Брокер мониторинга среды выполнения System Guard
 [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\SgrmBroker]
 "Start"=dword:00000004
-; Журнал событий Windows
-[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\EventLog]
-"Start"=dword:00000004
 ; Служба "Безопасность Windows"
 [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\SecurityHealthService]
 "Start"=dword:00000004
@@ -20,15 +17,3 @@ Windows Registry Editor Version 5.00
 ; Центр обеспечения безопасности
 [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\wscsvc]
 "Start"=dword:00000004
-; Контекстное меню. Закрепить на панели задач
-[-HKEY_CLASSES_ROOT\Launcher.AllAppsDesktopApplication\shellex\ContextMenuHandlers\{90AA3A4E-1CBA-4233-B8BB-535773D48449}]
-[-HKEY_CLASSES_ROOT\Launcher.Computer\shellex\ContextMenuHandlers\{90AA3A4E-1CBA-4233-B8BB-535773D48449}]
-[-HKEY_CLASSES_ROOT\Launcher.DesktopPackagedApplication\shellex\ContextMenuHandlers\{90AA3A4E-1CBA-4233-B8BB-535773D48449}]
-[-HKEY_CLASSES_ROOT\Launcher.ImmersiveApplication\shellex\ContextMenuHandlers\{90AA3A4E-1CBA-4233-B8BB-535773D48449}]
-[-HKEY_CLASSES_ROOT\Launcher.SystemSettings\shellex\ContextMenuHandlers\{90AA3A4E-1CBA-4233-B8BB-535773D48449}]
-; Закрепить на начальном экране
-[-HKEY_CLASSES_ROOT\Launcher.AllAppsDesktopApplication\shellex\ContextMenuHandlers\PintoStartScreen]
-[-HKEY_CLASSES_ROOT\Launcher.Computer\shellex\ContextMenuHandlers\PintoStartScreen]
-[-HKEY_CLASSES_ROOT\Launcher.DesktopPackagedApplication\shellex\ContextMenuHandlers\PintoStartScreen]
-[-HKEY_CLASSES_ROOT\Launcher.ImmersiveApplication\shellex\ContextMenuHandlers\PintoStartScreen]
-[-HKEY_CLASSES_ROOT\Launcher.SystemSettings\shellex\ContextMenuHandlers\PintoStartScreen]

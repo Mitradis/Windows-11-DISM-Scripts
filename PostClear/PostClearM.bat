@@ -1,25 +1,25 @@
-title Disable Default StartMenu
+title Block Start&Search
 taskkill /f /im StartMenuExperienceHost.exe
 taskkill /f /im ShellExperienceHost.exe
+taskkill /f /im DesktopStickerEditorWin32Exe.exe
+taskkill /f /im FESearchHost.exe
+taskkill /f /im LogonWebHostProduct.exe
 taskkill /f /im MiniSearchHost.exe
 taskkill /f /im ScreenClippingHost.exe
 taskkill /f /im SearchHost.exe
 taskkill /f /im TextInputHost.exe
 taskkill /f /im WebExperienceHostApp.exe
 TIMEOUT /T 2 /NOBREAK >nul
-set BLOCKLIST=Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\StartMenuExperienceHost.exe MicrosoftWindows.Client.CBS_cw5n1h2txyewy\MiniSearchHost.exe MicrosoftWindows.Client.CBS_cw5n1h2txyewy\ScreenClippingHost.exe MicrosoftWindows.Client.CBS_cw5n1h2txyewy\SearchHost.exe MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TextInputHost.exe MicrosoftWindows.Client.CBS_cw5n1h2txyewy\WebExperienceHostApp.exe
+set BLOCKLIST=Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\StartMenuExperienceHost.exe MicrosoftWindows.Client.CBS_cw5n1h2txyewy\DesktopStickerEditorWin32Exe\DesktopStickerEditorWin32Exe.exe MicrosoftWindows.Client.CBS_cw5n1h2txyewy\FESearchHost.exe MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LogonWebHostProduct.exe MicrosoftWindows.Client.CBS_cw5n1h2txyewy\MiniSearchHost.exe MicrosoftWindows.Client.CBS_cw5n1h2txyewy\SearchHost.exe MicrosoftWindows.Client.CBS_cw5n1h2txyewy\WebExperienceHostApp.exe
 if not exist %windir%\zh-CN\explorer.exe.mui (
-	for %%a in (%BLOCKLIST%) do (
-		takeown /f %windir%\SystemApps\%%a
-		icacls %windir%\SystemApps\%%a /grant "%username%":f /c /l /q
-		icacls %windir%\SystemApps\%%a /deny "*S-1-1-0:(W,D,X,R,RX,M,F)" "*S-1-5-7:(W,D,X,R,RX,M,F)"
-	)
+	set BLOCKLIST=%BLOCKLIST% MicrosoftWindows.Client.CBS_cw5n1h2txyewy\ScreenClippingHost.exe MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TextInputHost.exe
 )
-title Delete Start11 Shell
-net stop Start11
-taskkill /f /im Start11_64.exe
-del /f /q "%programfiles(x86)%\Stardock\Start11\Start10Shell32.dll"
-del /f /q "%programfiles(x86)%\Stardock\Start11\Start10Shell64.dll"
+for %%a in (%BLOCKLIST%) do (
+	takeown /f %windir%\SystemApps\%%a
+	icacls %windir%\SystemApps\%%a /grant "%username%":f /c /l /q
+	icacls %windir%\SystemApps\%%a /deny "*S-1-1-0:(W,D,X,R,RX,M,F)" "*S-1-5-7:(W,D,X,R,RX,M,F)"
+)
+TIMEOUT /T 1 /NOBREAK >nul
 title Editing .dll
 set EDITDLL=%windir%\System32\InputSwitch.dll
 if not exist %windir%\zh-CN\explorer.exe.mui (
@@ -111,9 +111,9 @@ schtasks /change /tn "Microsoft\Windows\WindowsUpdate\Scheduled Start" /disable
 %programdata%\PostClear\AdvancedRun.exe /EXEFilename %windir%\System32\schtasks.exe /CommandLine '/delete /tn "Microsoft\Windows\UpdateOrchestrator\Schedule Scan Static Task" /f' /RunAs 4 /WaitProcess 1 /Run
 %programdata%\PostClear\AdvancedRun.exe /EXEFilename %windir%\System32\schtasks.exe /CommandLine '/delete /tn "Microsoft\Windows\UpdateOrchestrator\Schedule Wake To Work" /f' /RunAs 4 /WaitProcess 1 /Run
 %programdata%\PostClear\AdvancedRun.exe /EXEFilename %windir%\System32\schtasks.exe /CommandLine '/delete /tn "Microsoft\Windows\UpdateOrchestrator\Schedule Work" /f' /RunAs 4 /WaitProcess 1 /Run
+%programdata%\PostClear\AdvancedRun.exe /EXEFilename %windir%\System32\schtasks.exe /CommandLine "/delete /tn Microsoft\Windows\UpdateOrchestrator\StartOobeAppsScan_LicenseAccepted /f" /RunAs 4 /WaitProcess 1 /Run
+%programdata%\PostClear\AdvancedRun.exe /EXEFilename %windir%\System32\schtasks.exe /CommandLine "/delete /tn Microsoft\Windows\UpdateOrchestrator\StartOobeAppsScanAfterUpdate /f" /RunAs 4 /WaitProcess 1 /Run
 %programdata%\PostClear\AdvancedRun.exe /EXEFilename %windir%\System32\schtasks.exe /CommandLine '/delete /tn "Microsoft\Windows\UpdateOrchestrator\Start Oobe Expedite Work" /f' /RunAs 4 /WaitProcess 1 /Run
-%programdata%\PostClear\AdvancedRun.exe /EXEFilename %windir%\System32\schtasks.exe /CommandLine "/delete /tn Microsoft\Windows\UpdateOrchestrator\StartOobeAppsScan /f" /RunAs 4 /WaitProcess 1 /Run
-%programdata%\PostClear\AdvancedRun.exe /EXEFilename %windir%\System32\schtasks.exe /CommandLine "/delete /tn Microsoft\Windows\UpdateOrchestrator\UpdateModelTask /f" /RunAs 4 /WaitProcess 1 /Run
 %programdata%\PostClear\AdvancedRun.exe /EXEFilename %windir%\System32\schtasks.exe /CommandLine "/delete /tn Microsoft\Windows\UpdateOrchestrator\USO_UxBroker /f" /RunAs 4 /WaitProcess 1 /Run
 %programdata%\PostClear\AdvancedRun.exe /EXEFilename %windir%\System32\schtasks.exe /CommandLine '/delete /tn "Microsoft\Windows\UpdateOrchestrator\UUS Failover Task" /f' /RunAs 4 /WaitProcess 1 /Run
 TIMEOUT /T 1 /NOBREAK >nul
@@ -142,47 +142,24 @@ powercfg /change monitor-timeout-ac 10
 powercfg /change monitor-timeout-dc 5
 powercfg /change standby-timeout-ac 0
 powercfg /change standby-timeout-dc 0
-title Freeze Eventlog
-rd /s /q %windir%\System32\winevt\Logs
-mkdir %windir%\System32\winevt\Logs
-icacls %windir%\System32\winevt\Logs /deny *S-1-1-0:(W,D,X,R,RX,M,F) *S-1-5-7:(W,D,X,R,RX,M,F)
 title Shortcuts
 if exist %windir%\ru-RU\explorer.exe.mui (
-	set rescom=+ Сбросить совместимость
-	set resmix=+ Сбросить микшер
-	set resfol=+ Сбросить папки
-	set resexp=+ Перезапустить проводник
-	set appxon=+ Вкл. поддержку AppX
-	set appxoff=+ Выкл. поддержку AppX
 	set oldnote=Блокнот
 	set oldcalc=Калькулятор
 ) else (
-	set rescom=+ Reset compatibility
-	set resmix=+ Reset mixer
-	set resfol=+ Reset folders
-	set resexp=+ Restart explorer
-	set appxon=+ Enable AppX support
-	set appxoff=+ Disable AppX support
 	set oldnote=Notepad
 	set oldcalc=Calculator
 )
-cscript %programdata%\PostClear\Shortcut.vbs "%programdata%\Microsoft\Windows\Start Menu\Programs\System Tools\%rescom%.lnk" "%programdata%\PostClear\Shortcuts\Compatibility.bat"
-cscript %programdata%\PostClear\Shortcut.vbs "%programdata%\Microsoft\Windows\Start Menu\Programs\System Tools\%resmix%.lnk" "%programdata%\PostClear\Shortcuts\MixerReset.bat"
-cscript %programdata%\PostClear\Shortcut.vbs "%programdata%\Microsoft\Windows\Start Menu\Programs\System Tools\%resfol%.lnk" "%programdata%\PostClear\Shortcuts\ResetFolders.bat"
-cscript %programdata%\PostClear\Shortcut.vbs "%programdata%\Microsoft\Windows\Start Menu\Programs\System Tools\%resexp%.lnk" "%programdata%\PostClear\Shortcuts\RestartExplorer.bat"
-cscript %programdata%\PostClear\Shortcut.vbs "%programdata%\Microsoft\Windows\Start Menu\Programs\System Tools\%appxon%.lnk" "%programdata%\PostClear\Shortcuts\AppxON.reg"
-cscript %programdata%\PostClear\Shortcut.vbs "%programdata%\Microsoft\Windows\Start Menu\Programs\System Tools\%appxoff%.lnk" "%programdata%\PostClear\Shortcuts\AppxOFF.reg"
+cscript %programdata%\PostClear\Shortcut.vbs "%programdata%\Microsoft\Windows\Start Menu\Programs\System Tools\WinTool.lnk" "%programdata%\PostClear\WinTool.exe"
 cscript %programdata%\PostClear\Shortcut.vbs "%programdata%\Microsoft\Windows\Start Menu\Programs\Accessories\%oldnote%.lnk" "%windir%\system32\notepad.exe"
 cscript %programdata%\PostClear\Shortcut.vbs "%programdata%\Microsoft\Windows\Start Menu\Programs\Accessories\%oldcalc%.lnk" "%windir%\System32\calc.exe"
 cscript %programdata%\PostClear\Shortcut.vbs "%programdata%\Microsoft\Windows\Start Menu\Programs\Microsoft Edge.lnk" "%programfiles(x86)%\Microsoft\Edge\Application\msedge.exe"
-rd /s /q "%programdata%\Microsoft\Windows\Start Menu\Programs\Start11"
 del /f /q "%userprofile%\Desktop\Microsoft Edge.lnk"
-del /f /q %public%\Desktop\Start11.lnk
 title Applying PostClearM.reg
-%programdata%\PostClear\AdvancedRun.exe /EXEFilename %windir%\regedit.exe /CommandLine "/S %programdata%\PostClear\PostClearM.reg" /RunAs 4 /WaitProcess 1 /Run
+%programdata%\PostClear\AdvancedRun.exe /EXEFilename %windir%\System32\reg.exe /CommandLine "import %programdata%\PostClear\PostClearM.reg" /RunAs 4 /WaitProcess 1 /Run
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate\Clients\{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}" /v location /t REG_SZ /d "%programfiles(x86)%\Microsoft\Edge\Application"
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate\Clients\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}" /v location /t REG_SZ /d "%programfiles(x86)%\Microsoft\Edge\Application"
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate\ClientState\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}" /v EBWebView /t REG_SZ /d "%programfiles(x86)%\Microsoft\Edge\Application\90.0.818.66"
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate\ClientState\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}" /v EBWebView /t REG_SZ /d "%programfiles(x86)%\Microsoft\Edge\Application\100.0.1185.36"
 TIMEOUT /T 1 /NOBREAK >nul
 title Finality
 del /f /q %programdata%\PostClear\AdvancedRun.exe

@@ -1,7 +1,10 @@
 Windows Registry Editor Version 5.00
+; Проход проверки сети
+[HKEY_LOCAL_MACHINE\WIM_SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE]
+"BypassNRO"=dword:00000001
 ; Автозапуск
 [HKEY_LOCAL_MACHINE\WIM_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run]
-"OneDriveSetup"="X:\\ProgramData\\PostClear\\PostClear.bat"
+"OneDriveSetup"="X:\\ProgramData\\PostClear\\_PostClear.bat"
 [HKEY_LOCAL_MACHINE\WIM_SOFTWARE\Microsoft\Windows\CurrentVersion\Run]
 "SecurityHealth"=-
 ; Edge Update
@@ -9,7 +12,10 @@ Windows Registry Editor Version 5.00
 [-HKEY_LOCAL_MACHINE\WIM_SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\MicrosoftEdgeUpdate.exe]
 [-HKEY_LOCAL_MACHINE\WIM_SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Microsoft Edge Update]
 [HKEY_LOCAL_MACHINE\WIM_SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Microsoft EdgeWebView]
+"DisplayName"="Microsoft Edge WebView2 Runtime"
+"DisplayVersion"="100.0.1185.36"
 "Version"="999.999.999.999"
+"NoRemove"=dword:00000001
 [HKEY_LOCAL_MACHINE\WIM_SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate]
 "version"="999.999.999.999"
 [HKEY_LOCAL_MACHINE\WIM_SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate\Clients\{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}]

@@ -57,6 +57,8 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Personalization\Settings]
 "AcceptedPrivacyPolicy"=dword:00000000
 ; Уведомления \ Конфиденциальность и защита
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe!App]
+"Enabled"=dword:00000000
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\Microsoft.Windows.InputSwitchToastHandler]
 "Enabled"=dword:00000000
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\windows.immersivecontrolpanel_cw5n1h2txyewy!microsoft.windows.immersivecontrolpanel]
@@ -64,6 +66,8 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.CapabilityAccess]
 "Enabled"=dword:00000000
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.SecurityAndMaintenance]
+"Enabled"=dword:00000000
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.BackupReminder]
 "Enabled"=dword:00000000
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.StartupApp]
 "Enabled"=dword:00000000
@@ -227,38 +231,3 @@ Windows Registry Editor Version 5.00
   10,a5,f1,02,60,8c,9e,eb,ac,0e,00,00,00,64,00,00,00,30,f1,25,b7,ef,47,1a,10,\
   a5,f1,02,60,8c,9e,eb,ac,0c,00,00,00,59,00,00,00,ed,30,bd,da,43,00,89,47,a7,\
   f8,d0,13,a4,73,66,22,64,00,00,00,15,02,00,00
-; Start11
-[HKEY_CURRENT_USER\Software\Stardock\Start8\Start8.ini\Right]
-"6"="0"
-[HKEY_CURRENT_USER\Software\Stardock\Start8\Start8.ini\Search]
-"RebuildNeeded"="0"
-[HKEY_CURRENT_USER\Software\Stardock\Start8\Start8.ini\Start8]
-"lRight"="9"
-"MenuMode"="0"
-"StandardStartMenu"="1"
-"AskedAboutTaskbarButtons"="1"
-"EnableS11Taskbar"="1"
-"CombineModePrimary"="2"
-"AskedAboutStartButton2"="1"
-"HorzAlignS11Taskbar"="0"
-"NewInstallDone"="1"
-"TileMode"="0"
-"TileModeOLD"="0"
-"HideAllPrograms"="0"
-"IconOnShutdownButton"="1"
-"LargeTree"="0"
-"ResizeTaskbar"="0"
-"UniversalInOwnFolder"="1"
-"DesktopInTree"="0"
-"Highlight"="0"
-"CustomColour"="0"
-"NoAnims"="1"
-"OffsetStart"="2"
-"ItemCount"="10"
-"DisableCharms"="0"
-"UseCortanaSearch"="0"
-"OldSearch"="0"
-"AllowTabSearch"="0"
-"Show8RWin2"="0"
-"Show8RWin"="0"
-"Show8Ctrl"="0"
