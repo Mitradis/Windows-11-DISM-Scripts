@@ -533,7 +533,11 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\InternetShortcut]
 "InfoTip"="prop:System.Link.TargetUrl;System.Rating;System.Link.Description;System.Link.Comment;System.Size;System.DateModified"
 [HKEY_CLASSES_ROOT\LibraryFolder]
-"InfoTip"="prop:System.DateModified;System.HomeGroupSharingStatus;System.Size"
+"InfoTip"="prop:System.DateModified;System.Size"
+[HKEY_CLASSES_ROOT\MSGraphDocument]
+"InfoTip"="prop:System.Size;System.DateModified"
+[HKEY_CLASSES_ROOT\MSGraphDocument_38664959]
+"InfoTip"="prop:System.Size;System.DateModified"
 [HKEY_CLASSES_ROOT\Msi.Package]
 "InfoTip"="prop:System.Author;System.Title;System.Subject;System.Comment;System.DateModified;System.Size"
 [HKEY_CLASSES_ROOT\Msi.Patch]
@@ -642,6 +646,8 @@ Windows Registry Editor Version 5.00
 "InfoTip"="prop:System.Photo.DateTaken;System.Keywords;*System.Photo.PeopleNames;System.Rating;*System.Image.Dimensions;*System.Size;System.Title;System.DateModified"
 [HKEY_CLASSES_ROOT\SystemFileAssociations\.jpg]
 "InfoTip"="prop:System.Photo.DateTaken;System.Keywords;*System.Photo.PeopleNames;System.Rating;*System.Image.Dimensions;*System.Size;System.Title;System.DateModified"
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.jxl]
+"InfoTip"="prop:System.Photo.DateTaken;System.Photo.CameraModel;System.Photo.ISOSpeed;System.Photo.FNumber;System.Photo.ExposureTime;System.Size;System.DateModified"
 [HKEY_CLASSES_ROOT\SystemFileAssociations\.jxr]
 "InfoTip"="prop:System.Photo.DateTaken;System.Keywords;System.Rating;*System.Image.Dimensions;*System.Size;System.Title;System.DateModified"
 [HKEY_CLASSES_ROOT\SystemFileAssociations\.k25]
