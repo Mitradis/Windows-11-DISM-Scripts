@@ -1,5 +1,6 @@
 title Contex menu and disable Start
 %programdata%\PostClear\WinTool.exe -setup=4095
+
 title Editing .dll
 set EDITDLL=%windir%\System32\InputSwitch.dll
 if not exist %windir%\zh-CN\explorer.exe.mui (
@@ -8,6 +9,7 @@ if not exist %windir%\zh-CN\explorer.exe.mui (
 	%programdata%\PostClear\HelpTool.exe %EDITDLL% "74 1F 48 63 D0 48 8D 0D 71 E9 02 00 48 C1 E2 04 48 03 D1 48 8B CF 48 89 57 60 8B D0 E8 28 02 00 00" "90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90"
 	%windir%\System32\WindowsPowerShell\v1.0\Powershell.exe -executionpolicy remotesigned -Command "& Get-Acl -Path %windir%\System32\control.exe | Set-Acl -Path %EDITDLL%"
 )
+
 title Deleting tasks
 schtasks /delete /tn Microsoft\XblGameSave\XblGameSaveTask /f
 schtasks /delete /tn "Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser" /f
@@ -84,6 +86,7 @@ schtasks /change /tn "Microsoft\Windows\WindowsUpdate\Scheduled Start" /disable
 %programdata%\PostClear\superUser64.exe /wrs %windir%\System32\schtasks.exe /delete /tn Microsoft\Windows\UpdateOrchestrator\USO_UxBroker /f
 %programdata%\PostClear\superUser64.exe /wrs %windir%\System32\schtasks.exe /delete /tn "Microsoft\Windows\UpdateOrchestrator\UUS Failover Task" /f
 TIMEOUT /T 1 /NOBREAK >nul
+
 title Applying GroupPolicy
 %programdata%\PostClear\LGPO.exe /m %programdata%\PostClear\GPM.pol
 %programdata%\PostClear\LGPO.exe /u %programdata%\PostClear\GPU.pol
@@ -92,28 +95,36 @@ del /f /q %programdata%\PostClear\GPM.pol
 del /f /q %programdata%\PostClear\GPU.pol
 del /f /q %programdata%\PostClear\LGPO.exe
 gpupdate /force
+
 title Stopping SuperFetch
 net stop SysMain
 TIMEOUT /T 1 /NOBREAK >nul
+
 title Deleting SuperFetch cache
 for /f "tokens=*" %%i in ('dir /b /s %windir%\Prefetch\*.pf') do (
 	del /f /q "%%~i"
 )
+
 title Stopping WindowsSearch
 net stop WSearch
 TIMEOUT /T 1 /NOBREAK >nul
+
 title Deleting WindowsSearch cache
 rd /s /q %programdata%\Microsoft\Search
+
 title Disable ReservedStorage
 Dism /Online /Set-ReservedStorageState /State:Disabled
+
 title Disable Hibernate and Standby
 powercfg /hibernate off
 powercfg /change monitor-timeout-ac 10
 powercfg /change monitor-timeout-dc 5
 powercfg /change standby-timeout-ac 0
 powercfg /change standby-timeout-dc 0
+
 title WinMine
 move %programdata%\PostClear\WinMine.exe "%programfiles(x86)%"
+
 title Shortcuts
 if exist %windir%\ru-RU\explorer.exe.mui (
 	set oldnote=Блокнот
@@ -134,6 +145,7 @@ if exist %programdata%\PostClear\WinHelp.html (
 %programdata%\PostClear\HelpTool.exe %windir%\System32\WindowsPowerShell\v1.0\powershell_ise.exe "%programdata%\Microsoft\Windows\Start Menu\Programs\System Tools\Windows PowerShell ISE.lnk"
 %programdata%\PostClear\HelpTool.exe "%programfiles(x86)%\Microsoft\Edge\Application\msedge.exe" "%programdata%\Microsoft\Windows\Start Menu\Programs\Microsoft Edge.lnk"
 %programdata%\PostClear\HelpTool.exe %windir%\system32\notepad.exe "%programdata%\Microsoft\Windows\Start Menu\Programs\Accessories\%oldnote%.lnk"
+
 title Remove protect
 set KEYSLIST=Launcher.AllAppsDesktopApplication Launcher.Computer Launcher.DesktopPackagedApplication Launcher.ImmersiveApplication Launcher.SystemSettings IE.AssocFile.WEBSITE Microsoft.Website
 for %%a in (%KEYSLIST%) do (
@@ -144,15 +156,19 @@ for %%a in (%KEYSLIST%) do (
 	del /f /q %programdata%\PostClear\_temp.reg
 )
 del /f /q %programdata%\PostClear\HelpTool.exe
+
 title Start RasMan service
 net start RasMan
+
 title Applying PostClearM.reg
 %programdata%\PostClear\superUser64.exe /wrs %windir%\System32\reg.exe import %programdata%\PostClear\PostClearM.reg
 del /f /q %programdata%\PostClear\superUser64.exe
 del /f /q %programdata%\PostClear\PostClearM.reg
+
 title Deleting Edge services
 sc delete edgeupdate
 sc delete edgeupdatem
+
 title Edge location
 mklink /j "%programfiles(x86)%\Microsoft\EdgeCore\100.0.1185.36" "%programfiles(x86)%\Microsoft\Edge\Application\100.0.1185.36"
 mklink /j "%programfiles(x86)%\Microsoft\EdgeWebView\Application\100.0.1185.36" "%programfiles(x86)%\Microsoft\Edge\Application\100.0.1185.36"
