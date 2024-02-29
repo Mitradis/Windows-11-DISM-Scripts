@@ -13,10 +13,10 @@ title Load registry
 reg load HKEY_LOCAL_MACHINE\WIM_BOOT Z:\boot\Windows\System32\config\SYSTEM
 
 title Disable TPM check
-reg add "HKEY_LOCAL_MACHINE\WIM_BOOT\Setup\LabConfig" /v BypassCPUCheck /t REG_DWORD /d 1
-reg add "HKEY_LOCAL_MACHINE\WIM_BOOT\Setup\LabConfig" /v BypassTPMCheck /t REG_DWORD /d 1
-reg add "HKEY_LOCAL_MACHINE\WIM_BOOT\Setup\LabConfig" /v BypassRAMCheck /t REG_DWORD /d 1
-reg add "HKEY_LOCAL_MACHINE\WIM_BOOT\Setup\LabConfig" /v BypassSecureBootCheck /t REG_DWORD /d 1
+reg add HKEY_LOCAL_MACHINE\WIM_BOOT\Setup\LabConfig /v BypassCPUCheck /t REG_DWORD /d 1
+reg add HKEY_LOCAL_MACHINE\WIM_BOOT\Setup\LabConfig /v BypassTPMCheck /t REG_DWORD /d 1
+reg add HKEY_LOCAL_MACHINE\WIM_BOOT\Setup\LabConfig /v BypassRAMCheck /t REG_DWORD /d 1
+reg add HKEY_LOCAL_MACHINE\WIM_BOOT\Setup\LabConfig /v BypassSecureBootCheck /t REG_DWORD /d 1
 
 title Unload registry
 reg unload HKEY_LOCAL_MACHINE\WIM_BOOT
@@ -144,8 +144,8 @@ if exist Z:\Install\Windows\zh-CN\explorer.exe.mui (
 rd /s /q Z:\Calc
 
 title GameDVR
-move Z:\KnownGameList.bin %DEL%
-%windir%\System32\WindowsPowerShell\v1.0\Powershell.exe -executionpolicy remotesigned -Command "& Get-Acl -Path Z:\Install\Windows\System32\control.exe | Set-Acl -Path %DEL%"
+move Z:\KnownGameList.bin Z:\Install\Windows\bcastdvr
+%windir%\System32\WindowsPowerShell\v1.0\Powershell.exe -executionpolicy remotesigned -Command "& Get-Acl -Path Z:\Install\Windows\System32\control.exe | Set-Acl -Path Z:\Install\Windows\bcastdvr\KnownGameList.bin"
 
 title Clear WinSxS
 for /f "tokens=*" %%i in ('dir Z:\Install\Windows\WinSxS\Backup /b /a:-d') do (
