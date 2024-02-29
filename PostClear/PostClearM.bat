@@ -85,7 +85,6 @@ schtasks /change /tn "Microsoft\Windows\WindowsUpdate\Scheduled Start" /disable
 %programdata%\PostClear\superUser64.exe /wrs %windir%\System32\schtasks.exe /delete /tn "Microsoft\Windows\UpdateOrchestrator\Start Oobe Expedite Work" /f
 %programdata%\PostClear\superUser64.exe /wrs %windir%\System32\schtasks.exe /delete /tn Microsoft\Windows\UpdateOrchestrator\USO_UxBroker /f
 %programdata%\PostClear\superUser64.exe /wrs %windir%\System32\schtasks.exe /delete /tn "Microsoft\Windows\UpdateOrchestrator\UUS Failover Task" /f
-TIMEOUT /T 1 /NOBREAK >nul
 
 title Applying GroupPolicy
 %programdata%\PostClear\LGPO.exe /m %programdata%\PostClear\GPM.pol

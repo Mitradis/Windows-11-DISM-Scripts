@@ -11,22 +11,18 @@ dism /mount-image /imagefile:Z:\boot.wim /index:2 /mountdir:Z:\boot
 
 title Load registry
 reg load HKEY_LOCAL_MACHINE\WIM_BOOT Z:\boot\Windows\System32\config\SYSTEM
-TIMEOUT /T 1 /NOBREAK >nul
 
 title Disable TPM check
 reg add "HKEY_LOCAL_MACHINE\WIM_BOOT\Setup\LabConfig" /v BypassCPUCheck /t REG_DWORD /d 1
 reg add "HKEY_LOCAL_MACHINE\WIM_BOOT\Setup\LabConfig" /v BypassTPMCheck /t REG_DWORD /d 1
 reg add "HKEY_LOCAL_MACHINE\WIM_BOOT\Setup\LabConfig" /v BypassRAMCheck /t REG_DWORD /d 1
 reg add "HKEY_LOCAL_MACHINE\WIM_BOOT\Setup\LabConfig" /v BypassSecureBootCheck /t REG_DWORD /d 1
-TIMEOUT /T 1 /NOBREAK >nul
 
 title Unload registry
 reg unload HKEY_LOCAL_MACHINE\WIM_BOOT
-TIMEOUT /T 1 /NOBREAK >nul
 
 title Unmount boot.wim
 dism /unmount-wim /mountdir:Z:\boot /commit
-TIMEOUT /T 1 /NOBREAK >nul
 
 title Compress boot.wim
 if exist Z:\boot.wim (
@@ -48,7 +44,6 @@ title Load registry
 reg load HKEY_LOCAL_MACHINE\WIM_SOFTWARE Z:\Install\Windows\System32\config\SOFTWARE
 reg load HKEY_LOCAL_MACHINE\WIM_SYSTEM Z:\Install\Windows\System32\config\SYSTEM
 reg load HKEY_LOCAL_MACHINE\WIM_CURRENT_USER Z:\Install\Users\Default\NTUSER.DAT
-TIMEOUT /T 1 /NOBREAK >nul
 
 title Applying _Clear.reg
 reg import Z:\_Clear.reg
@@ -58,7 +53,6 @@ title Disable Secondary Logs
 for /f "tokens=*" %%a in ('reg QUERY "HKEY_LOCAL_MACHINE\WIM_SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Channels"') do (
 	reg add "%%a" /v Enabled /t REG_DWORD /d 0 /f
 )
-TIMEOUT /T 1 /NOBREAK >nul
 
 title Unload registry
 reg unload HKEY_LOCAL_MACHINE\WIM_CURRENT_USER
@@ -168,7 +162,6 @@ for /f "tokens=*" %%i in ('dir Z:\Install\Windows\WinSxS\Backup /b /a:-d') do (
 title Compress Winre
 Z:\WimOptimize.exe Z:\Install\Windows\System32\Recovery\Winre.wim
 del /f /q Z:\WimOptimize.exe
-TIMEOUT /T 1 /NOBREAK >nul
 
 title Copy PostClear
 if not exist Z:\Install\Windows\ru-RU\explorer.exe.mui (
