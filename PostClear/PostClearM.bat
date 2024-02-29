@@ -121,29 +121,23 @@ powercfg /change monitor-timeout-dc 5
 powercfg /change standby-timeout-ac 0
 powercfg /change standby-timeout-dc 0
 
-title WinMine
-move %programdata%\PostClear\WinMine.exe "%programfiles(x86)%"
-
 title Shortcuts
 if exist %windir%\ru-RU\explorer.exe.mui (
-	set oldnote=Блокнот
 	set oldcalc=Калькулятор
-	set xpmine=Сапер
+	set oldnote=Блокнот
 ) else (
-	set oldnote=Notepad
 	set oldcalc=Calculator
-	set xpmine=WinMine
+	set oldnote=Notepad
 )
 if exist %programdata%\PostClear\WinHelp.html (
 	%programdata%\PostClear\HelpTool.exe %programdata%\PostClear\WinHelp.html "%programdata%\Microsoft\Windows\Start Menu\Programs\System Tools\WinHelp.lnk"
 )
 %programdata%\PostClear\HelpTool.exe %programdata%\PostClear\WinTool.exe "%programdata%\Microsoft\Windows\Start Menu\Programs\System Tools\WinTool.lnk"
 %programdata%\PostClear\HelpTool.exe %windir%\System32\calc.exe "%programdata%\Microsoft\Windows\Start Menu\Programs\Accessories\%oldcalc%.lnk"
-%programdata%\PostClear\HelpTool.exe "%programfiles(x86)%\WinMine.exe" "%programdata%\Microsoft\Windows\Start Menu\Programs\Accessories\%xpmine%.lnk"
+%programdata%\PostClear\HelpTool.exe %windir%\system32\notepad.exe "%programdata%\Microsoft\Windows\Start Menu\Programs\Accessories\%oldnote%.lnk"
 %programdata%\PostClear\HelpTool.exe %windir%\System32\WindowsPowerShell\v1.0\powershell.exe "%programdata%\Microsoft\Windows\Start Menu\Programs\System Tools\Windows PowerShell.lnk" %windir%
 %programdata%\PostClear\HelpTool.exe %windir%\System32\WindowsPowerShell\v1.0\powershell_ise.exe "%programdata%\Microsoft\Windows\Start Menu\Programs\System Tools\Windows PowerShell ISE.lnk"
 %programdata%\PostClear\HelpTool.exe "%programfiles(x86)%\Microsoft\Edge\Application\msedge.exe" "%programdata%\Microsoft\Windows\Start Menu\Programs\Microsoft Edge.lnk"
-%programdata%\PostClear\HelpTool.exe %windir%\system32\notepad.exe "%programdata%\Microsoft\Windows\Start Menu\Programs\Accessories\%oldnote%.lnk"
 
 title Remove protect
 set KEYSLIST=Launcher.AllAppsDesktopApplication Launcher.Computer Launcher.DesktopPackagedApplication Launcher.ImmersiveApplication Launcher.SystemSettings IE.AssocFile.WEBSITE Microsoft.Website
