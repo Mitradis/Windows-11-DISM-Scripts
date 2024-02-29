@@ -2,12 +2,12 @@ title Contex menu and disable Start
 %programdata%\PostClear\WinTool.exe -setup=4095
 
 title Editing .dll
-set EDITDLL=%windir%\System32\InputSwitch.dll
+set DLLEDIT=%windir%\System32\InputSwitch.dll
 if not exist %windir%\zh-CN\explorer.exe.mui (
-	takeown /f %EDITDLL%
-	icacls %EDITDLL% /grant "%username%":f /c /l /q
-	%programdata%\PostClear\HelpTool.exe %EDITDLL% "74 1F 48 63 D0 48 8D 0D 71 E9 02 00 48 C1 E2 04 48 03 D1 48 8B CF 48 89 57 60 8B D0 E8 28 02 00 00" "90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90"
-	%windir%\System32\WindowsPowerShell\v1.0\Powershell.exe -executionpolicy remotesigned -Command "& Get-Acl -Path %windir%\System32\control.exe | Set-Acl -Path %EDITDLL%"
+	takeown /f %DLLEDIT%
+	icacls %DLLEDIT% /grant "%username%":f /c /l /q
+	%programdata%\PostClear\HelpTool.exe %DLLEDIT% "74 1F 48 63 D0 48 8D 0D 71 E9 02 00 48 C1 E2 04 48 03 D1 48 8B CF 48 89 57 60 8B D0 E8 28 02 00 00" "90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90"
+	%windir%\System32\WindowsPowerShell\v1.0\Powershell.exe -executionpolicy remotesigned -Command "& Get-Acl -Path %windir%\System32\control.exe | Set-Acl -Path %DLLEDIT%"
 )
 
 title Deleting tasks
@@ -62,14 +62,14 @@ schtasks /delete /tn "Microsoft\Windows\User Profile Service\HiveUploadTask" /f
 schtasks /delete /tn Microsoft\Windows\WaaSMedic\PerformRemediation /f
 schtasks /delete /tn "Microsoft\Windows\Windows Error Reporting\QueueReporting" /f
 schtasks /delete /tn "Microsoft\Windows\WindowsUpdate\Scheduled Start" /f
+if exist %windir%\ru-RU\explorer.exe.mui (
+	schtasks /create /tn "Microsoft\Windows\WindowsUpdate\Scheduled Start" /tr %windir%\explorer.exe /sc once /sd 30/11/1999 /st 00:00 /ru SYSTEM
+)
 if exist %windir%\en-US\explorer.exe.mui (
 	schtasks /create /tn "Microsoft\Windows\WindowsUpdate\Scheduled Start" /tr %windir%\explorer.exe /sc once /sd 11/30/1999 /st 00:00 /ru SYSTEM
 )
 if exist %windir%\zh-CN\explorer.exe.mui (
 	schtasks /create /tn "Microsoft\Windows\WindowsUpdate\Scheduled Start" /tr %windir%\explorer.exe /sc once /sd 1999/11/30 /st 00:00 /ru SYSTEM
-)
-if exist %windir%\ru-RU\explorer.exe.mui (
-	schtasks /create /tn "Microsoft\Windows\WindowsUpdate\Scheduled Start" /tr %windir%\explorer.exe /sc once /sd 30/11/1999 /st 00:00 /ru SYSTEM
 )
 schtasks /change /tn "Microsoft\Windows\WindowsUpdate\Scheduled Start" /disable
 %windir%\System32\WindowsPowerShell\v1.0\Powershell.exe -executionpolicy remotesigned -Command "& Get-Acl -Path %windir%\System32\control.exe | Set-Acl -Path '%windir%\System32\Tasks\Microsoft\Windows\WindowsUpdate\Scheduled Start'"

@@ -113,12 +113,10 @@ title Add GameDVR
 set DELETELIST=%DELETELIST% Z:\Install\Windows\bcastdvr\KnownGameList.bin
 title Processing DELETELIST
 for %%a in (%DELETELIST%) do (
-	takeown /f %%a
-	icacls %%a /grant "%username%":f /c /l /q
 	if exist %%a\ (
-		rd /s /q %%a
+		Z:\PostClear\superUser64.exe /wrs %windir%\System32\cmd.exe /c rd /s /q %%a
 	) else (
-		del /f /q %%a
+		Z:\PostClear\superUser64.exe /wrs %windir%\System32\cmd.exe /c del /f /q %%a
 	)
 )
 
@@ -131,17 +129,17 @@ move Z:\Calc\calc.exe Z:\Install\Windows\System32
 %windir%\System32\WindowsPowerShell\v1.0\Powershell.exe -executionpolicy remotesigned -Command "& Get-Acl -Path Z:\Install\Windows\System32\control.exe | Set-Acl -Path Z:\Install\Windows\System32\calc.exe"
 move Z:\Calc\calc_64.exe Z:\Install\Windows\SysWOW64\calc.exe
 %windir%\System32\WindowsPowerShell\v1.0\Powershell.exe -executionpolicy remotesigned -Command "& Get-Acl -Path Z:\Install\Windows\System32\control.exe | Set-Acl -Path Z:\Install\Windows\SysWOW64\calc.exe"
+if exist Z:\Install\Windows\ru-RU\explorer.exe.mui (
+	Z:\PostClear\superUser64.exe /wrs %windir%\System32\cmd.exe /c copy Z:\Calc\calc.exe.ru.mui Z:\Install\Windows\System32\ru-RU\calc.exe.mui
+	move Z:\Calc\calc.exe.ru.mui Z:\Install\Windows\SysWOW64\ru-RU
+)
 if exist Z:\Install\Windows\en-US\explorer.exe.mui (
-	Z:\PostClear\superUser64.exe /wrs %windir%\System32\cmd.exe /C copy Z:\Calc\calc.exe.en.mui Z:\Install\Windows\System32\en-US\calc.exe.mui
+	Z:\PostClear\superUser64.exe /wrs %windir%\System32\cmd.exe /c copy Z:\Calc\calc.exe.en.mui Z:\Install\Windows\System32\en-US\calc.exe.mui
 	move Z:\Calc\calc.exe.en.mui Z:\Install\Windows\SysWOW64\en-US
 )
 if exist Z:\Install\Windows\zh-CN\explorer.exe.mui (
-	Z:\PostClear\superUser64.exe /wrs %windir%\System32\cmd.exe /C copy Z:\Calc\calc.exe.cn.mui Z:\Install\Windows\System32\zh-CN\calc.exe.mui
+	Z:\PostClear\superUser64.exe /wrs %windir%\System32\cmd.exe /c copy Z:\Calc\calc.exe.cn.mui Z:\Install\Windows\System32\zh-CN\calc.exe.mui
 	move Z:\Calc\calc.exe.cn.mui Z:\Install\Windows\SysWOW64\zh-CN
-)
-if exist Z:\Install\Windows\ru-RU\explorer.exe.mui (
-	Z:\PostClear\superUser64.exe /wrs %windir%\System32\cmd.exe /C copy Z:\Calc\calc.exe.ru.mui Z:\Install\Windows\System32\ru-RU\calc.exe.mui
-	move Z:\Calc\calc.exe.ru.mui Z:\Install\Windows\SysWOW64\ru-RU
 )
 rd /s /q Z:\Calc
 
@@ -151,8 +149,7 @@ move Z:\KnownGameList.bin %DEL%
 
 title Clear WinSxS
 for /f "tokens=*" %%i in ('dir Z:\Install\Windows\WinSxS\Backup /b /a:-d') do (
-	icacls "Z:\Install\Windows\WinSxS\Backup\%%~i" /grant "%username%":f /c /l /q
-	del /f /q "Z:\Install\Windows\WinSxS\Backup\%%~i"
+	Z:\PostClear\superUser64.exe /wrs %windir%\System32\cmd.exe /c del /f /q "Z:\Install\Windows\WinSxS\Backup\%%~i"
 )
 
 title Compress Winre
