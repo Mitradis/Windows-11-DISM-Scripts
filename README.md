@@ -17,7 +17,7 @@ The work of the set is divided into 2 stages:
 - 在创建并登录第一个帐户后开始的第二阶段，设备按顺序运行并自动重新启动两次。 首次重新启动之前，Windows Defender 及其相关服务被禁用。 在第二次重新启动之前，将执行整个后续操作，包括禁用服务、替换“开始”菜单、删除任务、应用组策略、配置系统设置和其他细微更改。
 
 # Применение:
-- Набор работает только на Windows 10\11. Необязательно, но на время выполнения, рекомендуется отключить мониторинг у антивирусов. Понадобиться любой диск (если RAM, то нужна поддержка NTFS DISM команд, SoftPerfect RAM Disk и аналоги) с буквой Z размером не менее 14000МБ.
+- Набор работает только на Windows 10\11. Должны быть все права администратора. Необязательно, но на время выполнения, рекомендуется отключить мониторинг у антивирусов. Понадобиться любой диск (если RAM, то нужна поддержка NTFS DISM команд, SoftPerfect RAM Disk и аналоги) с буквой Z размером не менее 14000МБ.
 - Скачать указанные в Релизе нужный образ. Образ должен быть смонтирован, но не находится на диске Z, если диск минимального размера.
 - Распаковать скрипты, файлы install.wim и boot.wim (из папки source файла .iso) в корень диска Z.
 - Скачать StartAllBack\Start11 и поместить его в Z:\PostClear под именем CustomStart.exe (по умолчанию скрипты рассчитаны на репак StartAllBack с ключом установки /S).
@@ -29,7 +29,7 @@ The work of the set is divided into 2 stages:
 - Образ готов.
 
 # Application:
-- The set only works on Windows 10\11. Optional, but for the duration of execution, it is recommended to disable antivirus monitoring. You will need any disk (if RAM, then you need support for NTFS DISM commands, SoftPerfect RAM Disk and analogues) with the letter Z and a size of at least 14000MB.
+- The set only works on Windows 10\11. Must have full administrator rights. Optional, but for the duration of execution, it is recommended to disable antivirus monitoring. You will need any disk (if RAM, then you need support for NTFS DISM commands, SoftPerfect RAM Disk and analogues) with the letter Z and a size of at least 14000MB.
 - Download the required image specified in the Release. The image must be mounted, but not located on the Z drive if the drive is the minimum size.
 - Unpack the scripts, install.wim and boot.wim files (from the source folder of the .iso file) to the root of the Z drive.
 - Download StartAllBack\Start11 and place it in Z:\PostClear under the name CustomStart.exe (By default, the scripts are designed for the StartAllBack repack with the installation key /S).
@@ -41,7 +41,7 @@ The work of the set is divided into 2 stages:
 - The image is ready.
 
 # 应用：
-- 该套件仅适用于 Windows 10\11。 可选，但在执行期间，建议禁用防病毒监控。 您将需要任何带有字母 Z 且大小至少为 14000MB 的磁盘（如果是 RAM，则需要支持 NTFS DISM 命令、SoftPerfect RAM 磁盘和类似磁盘）。
+- 该套件仅适用于 Windows 10\11。 必须具有完整的管理员权限。 可选，但在执行期间，建议禁用防病毒监控。 您将需要任何带有字母 Z 且大小至少为 14000MB 的磁盘（如果是 RAM，则需要支持 NTFS DISM 命令、SoftPerfect RAM 磁盘和类似磁盘）。
 - 下载版本中指定的所需映像。 如果驱动器是最小大小，则必须安装映像，但不能将映像定位在 Z 驱动器上。
 - 将脚本、install.wim 和 boot.wim 文件（来自 .iso 文件的源文件夹）解压到 Z 驱动器的根目录。
 - 下载 StartAllBack\Start11 并将其放置在 Z:\PostClear 中，名称为 CustomStart.exe（默认情况下，脚本是为使用安装密钥 /S 进行 StartAllBack 重新打包而设计的）。
