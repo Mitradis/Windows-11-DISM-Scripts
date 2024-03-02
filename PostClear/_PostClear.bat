@@ -71,7 +71,8 @@ reg add HKEY_CURRENT_USER\Software\StartIsBack /v Start_ShowRecentDocs /t REG_DW
 reg add HKEY_CURRENT_USER\Software\StartIsBack /v SysTrayStyle /t REG_DWORD /d 0 /f
 reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer /v EnableAutoTray /t REG_DWORD /d 0 /f
 reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v TaskbarGlomLevel /t REG_DWORD /d 2 /f
-:Reboot
+del /f /q "%appdata%\Microsoft\Windows\Start Menu\Programs\Accessories\Internet Explorer.lnk"
 
+:Reboot
 title Rebooting...
 SHUTDOWN -r -t 3
