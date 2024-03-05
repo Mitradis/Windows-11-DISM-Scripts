@@ -1,5 +1,5 @@
 title Contex menu and disable Start
-%programdata%\PostClear\WinTool.exe -setup=4095
+%programdata%\PostClear\WinTool.exe -setup=8191
 
 title Editing .dll
 set DLLEDIT=%windir%\System32\InputSwitch.dll

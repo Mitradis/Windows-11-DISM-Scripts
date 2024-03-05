@@ -67,9 +67,6 @@ Windows Registry Editor Version 5.00
 ; Персонализация - Цвета: Выберите режим Windows
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize]
 "SystemUsesLightTheme"=dword:00000000
-; Классическое контекстное меню
-[HKEY_CURRENT_USER\Software\Classes\CLSID\{86CA1AA0-34AA-4E8B-A509-50C905BAE2A2}\InprocServer32]
-@=""
 ; Персонализация - Цвета: Заголовки окон и границы окон
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM]
 "ColorPrevalence"=dword:00000001

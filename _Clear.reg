@@ -3,7 +3,7 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\WIM_SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE]
 "BypassNRO"=dword:00000001
 ; Автозапуск
-[HKEY_LOCAL_MACHINE\WIM_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run]
+[HKEY_LOCAL_MACHINE\WIM_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run]
 "OneDriveSetup"="X:\\ProgramData\\PostClear\\_PostClear.bat"
 [HKEY_LOCAL_MACHINE\WIM_SOFTWARE\Microsoft\Windows\CurrentVersion\Run]
 "SecurityHealth"=-
