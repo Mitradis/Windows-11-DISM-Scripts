@@ -98,6 +98,7 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search]
 "SearchboxTaskbarMode"=dword:00000000
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"Start_AccountNotifications"=dword:00000000
 "ShowCopilotButton"=dword:00000000
 "ShowTaskViewButton"=dword:00000000
 "TaskbarMn"=dword:00000000

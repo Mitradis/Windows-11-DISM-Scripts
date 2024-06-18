@@ -35,6 +35,7 @@ if exist %programdata%\PostClear\PostClearM.bat (
 title Turn-off auto run last apps
 FOR /F "tokens=1,2 delims==" %%s IN ('wmic path win32_useraccount where name^='%username%' get sid /value ^| find /i "SID"') DO SET SID=%%t
 reg add "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\UserARSO\%SID%" /v OptOut /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\InstallService\Stubification\%SID%" /v EnableAppOffloading /t REG_DWORD /d 0 /f
 
 title Applying _PostClear.reg
 reg import %programdata%\PostClear\_PostClear.reg
