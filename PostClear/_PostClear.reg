@@ -94,6 +94,12 @@ Windows Registry Editor Version 5.00
 "IsAADCloudSearchEnabled"=dword:00000000
 "IsMSACloudSearchEnabled"=dword:00000000
 "IsDynamicSearchBoxEnabled"=dword:00000000
+; Показывать недавно\часто используемые на панели быстрого доступа
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer]
+"ShowRecent"=dword:00000000
+"ShowFrequent"=dword:00000000
+"ShowCloudFilesInQuickAccess"=dword:00000000
+"ShowRecommendations"=dword:00000000
 ; Панель задач: Поиск \ Copilot\ Просмотр задач \ Показать Чат \ Выравнивание панели задач
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search]
 "SearchboxTaskbarMode"=dword:00000000
