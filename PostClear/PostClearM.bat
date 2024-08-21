@@ -6,7 +6,7 @@ set DLLEDIT=%windir%\System32\InputSwitch.dll
 if not exist %windir%\zh-CN\explorer.exe.mui (
 	takeown /f %DLLEDIT%
 	icacls %DLLEDIT% /grant "%username%":f /c /l /q
-	%programdata%\PostClear\HelpTool.exe %DLLEDIT% "74 1F 48 63 D0 48 8D 0D 41 EC 02 00 48 C1 E2 04 48 03 D1 48 8B CF 48 89 57 60 8B D0 E8 28 02 00 00" "90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90"
+	%programdata%\PostClear\HelpTool.exe %DLLEDIT% "74 1F 48 63 D0 48 8D 0D B1 E9 02 00 48 C1 E2 04 48 03 D1 48 8B CF 48 89 57 60 8B D0 E8 28 02 00 00" "90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90"
 	%windir%\System32\WindowsPowerShell\v1.0\Powershell.exe -executionpolicy remotesigned -Command "& Get-Acl -Path %windir%\System32\control.exe | Set-Acl -Path %DLLEDIT%"
 )
 

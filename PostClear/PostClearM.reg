@@ -215,7 +215,7 @@ Windows Registry Editor Version 5.00
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\audio\shell\Play]
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\Directory.Audio\shell\Play]
 [-HKEY_CLASSES_ROOT\SystemFileAssociations\Directory.Image\shell\Play]
-; Add to Windows Media Player list
+; Add to Windows Media Player Legacy list
 [-HKEY_CLASSES_ROOT\MediaCenter.WTVFile\shell\Enqueue]
 [-HKEY_CLASSES_ROOT\Stack.Audio\shell\Enqueue]
 [-HKEY_CLASSES_ROOT\Stack.Image\shell\Enqueue]
