@@ -13,7 +13,7 @@ if exist %programdata%\PostClear\FirstLoad.reg (
 	title Stopping DiagTrack
 	net stop DiagTrack
 	title Applying FirstLoad.reg
-	%programdata%\PostClear\superUser64.exe /wrs %windir%\System32\reg.exe import %programdata%\PostClear\FirstLoad.reg
+	%programdata%\PostClear\superUser64.exe /ws %windir%\System32\reg.exe import %programdata%\PostClear\FirstLoad.reg
 	title Deleting Defender tasks
 	schtasks /delete /tn "Microsoft\Windows\Windows Defender\Windows Defender Cache Maintenance" /f
 	schtasks /delete /tn "Microsoft\Windows\Windows Defender\Windows Defender Cleanup" /f
@@ -33,7 +33,7 @@ if exist %programdata%\PostClear\PostClearM.bat (
 )
 
 title Turn-off auto run last apps
-FOR /F "tokens=1,2 delims==" %%s IN ('wmic path win32_useraccount where name^='%username%' get sid /value ^| find /i "SID"') DO SET SID=%%t
+For /F Tokens^=3^ Delims^=^" %%G In ('%windir%\System32\whoami.exe /User /Fo CSV /NH') DO SET SID=%%G
 reg add "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\UserARSO\%SID%" /v OptOut /t REG_DWORD /d 1 /f
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\InstallService\Stubification\%SID%" /v EnableAppOffloading /t REG_DWORD /d 0 /f
 

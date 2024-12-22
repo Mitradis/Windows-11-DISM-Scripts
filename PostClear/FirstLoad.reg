@@ -9,12 +9,34 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\Sense]
 "Start"=dword:00000004
 ; Службы - спутники Защитника
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\MsSecCore]
+"Start"=dword:00000004
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\MsSecFlt]
+"Start"=dword:00000004
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\MsSecWfp]
+"Start"=dword:00000004
 [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\WdBoot]
 "Start"=dword:00000004
 [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\WdFilter]
 "Start"=dword:00000004
 [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\WdNisDrv]
 "Start"=dword:00000004
+; Интеллектуальынй контроль приложений
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender]
+"VerifiedAndReputableTrustModeEnabled"=dword:00000000
+"SmartLockerMode"=dword:00000000
+"ServiceStartStates"=dword:00000000
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\CI\Policy]
+"VerifiedAndReputablePolicyState"=dword:00000000
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Srp\Gp]
+"LastSmartlockerEnabled"=dword:00000000
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\AppID\Configuration\SMARTLOCKER]
+"ENABLED"=hex(b):00,00,00,00,00,00,00,00
+"START_PENDING"=dword:00000000
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
+"SmartScreenEnabled"="Off"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WTDS\Components]
+"ServiceEnabled"=dword:00000000
 ; Служба антивирусной программы Microsoft Defender
 [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\WinDefend]
 "Start"=dword:00000004

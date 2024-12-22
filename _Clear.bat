@@ -91,32 +91,32 @@ attrib +r -s -h "Z:\Install\Users\Default\AppData\Roaming\Microsoft\Windows\Star
 
 title EdgeUpdate
 rd /s /q "Z:\Install\Program Files (x86)\Microsoft\EdgeUpdate"
-rd /s /q "Z:\Install\Program Files (x86)\Microsoft\EdgeCore\100.0.1185.36"
-rd /s /q "Z:\Install\Program Files (x86)\Microsoft\EdgeWebView\Application\100.0.1185.36"
-rd /s /q "Z:\Install\Program Files (x86)\Microsoft\Edge\Application\100.0.1185.36\Installer"
-del /f /q "Z:\Install\Program Files (x86)\Microsoft\Edge\Application\100.0.1185.36\elevation_service.exe"
-del /f /q "Z:\Install\Program Files (x86)\Microsoft\Edge\Application\100.0.1185.36\notification_helper.exe"
-del /f /q "Z:\Install\Program Files (x86)\Microsoft\Edge\Application\100.0.1185.36\notification_helper.exe.manifest"
+rd /s /q "Z:\Install\Program Files (x86)\Microsoft\EdgeCore\122.0.2365.106"
+rd /s /q "Z:\Install\Program Files (x86)\Microsoft\EdgeWebView\Application\122.0.2365.106"
+rd /s /q "Z:\Install\Program Files (x86)\Microsoft\Edge\Application\122.0.2365.106\Installer"
+del /f /q "Z:\Install\Program Files (x86)\Microsoft\Edge\Application\122.0.2365.106\elevation_service.exe"
+del /f /q "Z:\Install\Program Files (x86)\Microsoft\Edge\Application\122.0.2365.106\notification_helper.exe"
+del /f /q "Z:\Install\Program Files (x86)\Microsoft\Edge\Application\122.0.2365.106\notification_helper.exe.manifest"
 
 title Disable Appx Protect
 %windir%\System32\WindowsPowerShell\v1.0\Powershell.exe -executionpolicy remotesigned -Command "& Get-Acl -Path Z:\Install\Windows | Set-Acl -Path 'Z:\Install\Program Files\WindowsApps'"
 
 title Add OneDrive
-set DELETELIST=Z:\Install\Windows\System32\OneDriveSetup.exe Z:\Install\Windows\WinSxS\Manifests\amd64_microsoft-windows-onedrive-setup_31bf3856ad364e35_10.0.22621.1_none_86d60ce019ce7baf.manifest Z:\Install\Windows\WinSxS\SettingsManifests\amd64_microsoft-windows-onedrive-setup_31bf3856ad364e35_10.0.22621.1_none_86d60ce019ce7baf.manifest Z:\Install\Windows\WinSxS\Manifests\amd64_microsoft-windows-onedrive-setupregistry_31bf3856ad364e35_10.0.22621.1_none_51812954380458e2.manifest Z:\Install\Windows\WinSxS\Manifests\wow64_microsoft-windows-onedrive-setupregistry_31bf3856ad364e35_10.0.22621.1_none_5bd5d3a66c651add.manifest Z:\Install\Windows\servicing\Packages\Microsoft-Windows-OneDrive-Setup-Package~31bf3856ad364e35~amd64~~10.0.22621.1.cat Z:\Install\Windows\servicing\Packages\Microsoft-Windows-OneDrive-Setup-Package~31bf3856ad364e35~amd64~~10.0.22621.1.mum Z:\Install\Windows\servicing\Packages\Microsoft-Windows-OneDrive-Setup-Package~31bf3856ad364e35~amd64~ru-RU~10.0.22621.1.cat Z:\Install\Windows\servicing\Packages\Microsoft-Windows-OneDrive-Setup-Package~31bf3856ad364e35~amd64~ru-RU~10.0.22621.1.mum Z:\Install\Windows\servicing\Packages\Microsoft-Windows-OneDrive-Setup-WOW64-Package~31bf3856ad364e35~amd64~~10.0.22621.1.cat Z:\Install\Windows\servicing\Packages\Microsoft-Windows-OneDrive-Setup-WOW64-Package~31bf3856ad364e35~amd64~~10.0.22621.1.mum Z:\Install\Windows\servicing\Packages\Microsoft-Windows-OneDrive-Setup-WOW64-Package~31bf3856ad364e35~amd64~ru-RU~10.0.22621.1.cat Z:\Install\Windows\servicing\Packages\Microsoft-Windows-OneDrive-Setup-WOW64-Package~31bf3856ad364e35~amd64~ru-RU~10.0.22621.1.mum Z:\Install\Windows\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-OneDrive-Setup-Package~31bf3856ad364e35~amd64~~10.0.22621.1.cat Z:\Install\Windows\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-OneDrive-Setup-Package~31bf3856ad364e35~amd64~ru-RU~10.0.22621.1.cat Z:\Install\Windows\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-OneDrive-Setup-WOW64-Package~31bf3856ad364e35~amd64~~10.0.22621.1.cat Z:\Install\Windows\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-OneDrive-Setup-WOW64-Package~31bf3856ad364e35~amd64~ru-RU~10.0.22621.1.cat Z:\Install\Windows\WinSxS\amd64_microsoft-windows-onedrive-setup_31bf3856ad364e35_10.0.22621.1_none_86d60ce019ce7baf
+set DELETELIST=Z:\Install\Windows\System32\OneDriveSetup.exe Z:\Install\Windows\WinSxS\Manifests\amd64_microsoft-windows-onedrive-setup_31bf3856ad364e35_10.0.26100.1_none_2233e98c8e9ce5f5.manifest Z:\Install\Windows\WinSxS\Manifests\amd64_microsoft-windows-onedrive-setupregistry_31bf3856ad364e35_10.0.26100.1_none_ecdf0600acd2c328.manifest Z:\Install\Windows\WinSxS\Manifests\wow64_microsoft-windows-onedrive-setupregistry_31bf3856ad364e35_10.0.26100.1_none_f733b052e1338523.manifest Z:\Install\Windows\servicing\Packages\Microsoft-Windows-OneDrive-Setup-Package~31bf3856ad364e35~amd64~~10.0.26100.1.cat Z:\Install\Windows\servicing\Packages\Microsoft-Windows-OneDrive-Setup-Package~31bf3856ad364e35~amd64~~10.0.26100.1.mum Z:\Install\Windows\servicing\Packages\Microsoft-Windows-OneDrive-Setup-Package~31bf3856ad364e35~amd64~ru-RU~10.0.26100.1.cat Z:\Install\Windows\servicing\Packages\Microsoft-Windows-OneDrive-Setup-Package~31bf3856ad364e35~amd64~ru-RU~10.0.26100.1.mum Z:\Install\Windows\servicing\Packages\Microsoft-Windows-OneDrive-Setup-WOW64-Package~31bf3856ad364e35~amd64~~10.0.26100.1.cat Z:\Install\Windows\servicing\Packages\Microsoft-Windows-OneDrive-Setup-WOW64-Package~31bf3856ad364e35~amd64~~10.0.26100.1.mum Z:\Install\Windows\servicing\Packages\Microsoft-Windows-OneDrive-Setup-WOW64-Package~31bf3856ad364e35~amd64~ru-RU~10.0.26100.1.cat Z:\Install\Windows\servicing\Packages\Microsoft-Windows-OneDrive-Setup-WOW64-Package~31bf3856ad364e35~amd64~ru-RU~10.0.26100.1.mum Z:\Install\Windows\WinSxS\SettingsManifests\amd64_microsoft-windows-onedrive-setup_31bf3856ad364e35_10.0.26100.1_none_2233e98c8e9ce5f5.manifest Z:\Install\Windows\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-OneDrive-Setup-Package~31bf3856ad364e35~amd64~~10.0.26100.1.cat Z:\Install\Windows\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-OneDrive-Setup-Package~31bf3856ad364e35~amd64~ru-RU~10.0.26100.1.cat Z:\Install\Windows\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-OneDrive-Setup-WOW64-Package~31bf3856ad364e35~amd64~~10.0.26100.1.cat Z:\Install\Windows\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-OneDrive-Setup-WOW64-Package~31bf3856ad364e35~amd64~ru-RU~10.0.26100.1.cat Z:\Install\Windows\WinSxS\amd64_microsoft-windows-onedrive-setup_31bf3856ad364e35_10.0.26100.1_none_2233e98c8e9ce5f5
 title Add WaaS
 set DELETELIST=%DELETELIST% Z:\Install\Windows\WinSxS\FileMaps\$$_waas_regkeys_dbffc348a6fab71c.cdf-ms Z:\Install\Windows\WinSxS\FileMaps\$$_waas_services_ddfc4ae175ff1678.cdf-ms Z:\Install\Windows\WaaS\regkeys Z:\Install\Windows\WaaS\services Z:\Install\Windows\WaaS
 title Add UPFC
-set DELETELIST=%DELETELIST% Z:\Install\Windows\System32\upfc.exe Z:\Install\Windows\WinSxS\Manifests\amd64_microsoft-windows-upfc_31bf3856ad364e35_10.0.22621.1_none_08bb51571021559f.manifest Z:\Install\Windows\WinSxS\amd64_microsoft-windows-upfc_31bf3856ad364e35_10.0.22621.1_none_08bb51571021559f
+set DELETELIST=%DELETELIST% Z:\Install\Windows\System32\upfc.exe Z:\Install\Windows\WinSxS\Manifests\amd64_microsoft-windows-upfc_31bf3856ad364e35_10.0.26100.1150_none_430cd619cc4d0de3.manifest Z:\Install\Windows\WinSxS\Manifests\amd64_microsoft-windows-upfc_31bf3856ad364e35_10.0.26100.2454_none_42ec0d1bcc65c561.manifest Z:\Install\Windows\WinSxS\amd64_microsoft-windows-upfc_31bf3856ad364e35_10.0.26100.2454_none_42ec0d1bcc65c561
 title Add calc
-set DELETELIST=%DELETELIST% Z:\Install\Windows\System32\calc.exe Z:\Install\Windows\SysWOW64\calc.exe Z:\Install\Windows\WinSxS\Manifests\amd64_microsoft-windows-calc_31bf3856ad364e35_10.0.22621.1_none_0b53ccef0e7a283c.manifest Z:\Install\Windows\WinSxS\Manifests\wow64_microsoft-windows-calc_31bf3856ad364e35_10.0.22621.1_none_15a8774142daea37.manifest Z:\Install\Windows\WinSxS\amd64_microsoft-windows-calc_31bf3856ad364e35_10.0.22621.1_none_0b53ccef0e7a283c Z:\Install\Windows\WinSxS\wow64_microsoft-windows-calc_31bf3856ad364e35_10.0.22621.1_none_15a8774142daea37
+set DELETELIST=%DELETELIST% Z:\Install\Windows\System32\calc.exe Z:\Install\Windows\SysWOW64\calc.exe Z:\Install\Windows\WinSxS\Manifests\amd64_microsoft-windows-calc_31bf3856ad364e35_10.0.26100.1_none_a6b1a99b83489282.manifest Z:\Install\Windows\WinSxS\Manifests\amd64_microsoft-windows-calc_31bf3856ad364e35_10.0.26100.1882_none_455c758bcadc235e.manifest Z:\Install\Windows\WinSxS\Manifests\wow64_microsoft-windows-calc_31bf3856ad364e35_10.0.26100.1_none_b10653edb7a9547d.manifest Z:\Install\Windows\WinSxS\Manifests\wow64_microsoft-windows-calc_31bf3856ad364e35_10.0.26100.1882_none_4fb11fddff3ce559.manifest Z:\Install\Windows\WinSxS\amd64_microsoft-windows-calc_31bf3856ad364e35_10.0.26100.1_none_a6b1a99b83489282 Z:\Install\Windows\WinSxS\amd64_microsoft-windows-calc_31bf3856ad364e35_10.0.26100.1882_none_455c758bcadc235e Z:\Install\Windows\WinSxS\wow64_microsoft-windows-calc_31bf3856ad364e35_10.0.26100.1_none_b10653edb7a9547d Z:\Install\Windows\WinSxS\wow64_microsoft-windows-calc_31bf3856ad364e35_10.0.26100.1882_none_4fb11fddff3ce559
 title Add GameDVR
 set DELETELIST=%DELETELIST% Z:\Install\Windows\bcastdvr\KnownGameList.bin
 title Processing DELETELIST
 for %%a in (%DELETELIST%) do (
 	if exist %%a\ (
-		Z:\PostClear\superUser64.exe /wrs %windir%\System32\cmd.exe /c rd /s /q %%a
+		Z:\PostClear\superUser64.exe /ws %windir%\System32\cmd.exe /c rd /s /q %%a
 	) else (
-		Z:\PostClear\superUser64.exe /wrs %windir%\System32\cmd.exe /c del /f /q %%a
+		Z:\PostClear\superUser64.exe /ws %windir%\System32\cmd.exe /c del /f /q %%a
 	)
 )
 
@@ -130,15 +130,15 @@ move Z:\Calc\calc.exe Z:\Install\Windows\System32
 move Z:\Calc\calc_64.exe Z:\Install\Windows\SysWOW64\calc.exe
 %windir%\System32\WindowsPowerShell\v1.0\Powershell.exe -executionpolicy remotesigned -Command "& Get-Acl -Path Z:\Install\Windows\System32\control.exe | Set-Acl -Path Z:\Install\Windows\SysWOW64\calc.exe"
 if exist Z:\Install\Windows\ru-RU\explorer.exe.mui (
-	Z:\PostClear\superUser64.exe /wrs %windir%\System32\cmd.exe /c copy Z:\Calc\calc.exe.ru.mui Z:\Install\Windows\System32\ru-RU\calc.exe.mui
+	Z:\PostClear\superUser64.exe /ws %windir%\System32\cmd.exe /c copy Z:\Calc\calc.exe.ru.mui Z:\Install\Windows\System32\ru-RU\calc.exe.mui
 	move Z:\Calc\calc.exe.ru.mui Z:\Install\Windows\SysWOW64\ru-RU
 )
 if exist Z:\Install\Windows\en-US\explorer.exe.mui (
-	Z:\PostClear\superUser64.exe /wrs %windir%\System32\cmd.exe /c copy Z:\Calc\calc.exe.en.mui Z:\Install\Windows\System32\en-US\calc.exe.mui
+	Z:\PostClear\superUser64.exe /ws %windir%\System32\cmd.exe /c copy Z:\Calc\calc.exe.en.mui Z:\Install\Windows\System32\en-US\calc.exe.mui
 	move Z:\Calc\calc.exe.en.mui Z:\Install\Windows\SysWOW64\en-US
 )
 if exist Z:\Install\Windows\zh-CN\explorer.exe.mui (
-	Z:\PostClear\superUser64.exe /wrs %windir%\System32\cmd.exe /c copy Z:\Calc\calc.exe.cn.mui Z:\Install\Windows\System32\zh-CN\calc.exe.mui
+	Z:\PostClear\superUser64.exe /ws %windir%\System32\cmd.exe /c copy Z:\Calc\calc.exe.cn.mui Z:\Install\Windows\System32\zh-CN\calc.exe.mui
 	move Z:\Calc\calc.exe.cn.mui Z:\Install\Windows\SysWOW64\zh-CN
 )
 rd /s /q Z:\Calc
@@ -149,7 +149,7 @@ move Z:\KnownGameList.bin Z:\Install\Windows\bcastdvr
 
 title Clear WinSxS
 for /f "tokens=*" %%i in ('dir Z:\Install\Windows\WinSxS\Backup /b /a:-d') do (
-	Z:\PostClear\superUser64.exe /wrs %windir%\System32\cmd.exe /c del /f /q "Z:\Install\Windows\WinSxS\Backup\%%~i"
+	Z:\PostClear\superUser64.exe /ws %windir%\System32\cmd.exe /c del /f /q "Z:\Install\Windows\WinSxS\Backup\%%~i"
 )
 
 title Compress Winre

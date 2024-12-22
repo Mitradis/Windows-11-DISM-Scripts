@@ -6,7 +6,7 @@ set DLLEDIT=%windir%\System32\InputSwitch.dll
 if not exist %windir%\zh-CN\explorer.exe.mui (
 	takeown /f %DLLEDIT%
 	icacls %DLLEDIT% /grant "%username%":f /c /l /q
-	%programdata%\PostClear\HelpTool.exe %DLLEDIT% "74 1F 48 63 D0 48 8D 0D 69 E2 02 00 48 C1 E2 04 48 03 D1 48 8B CF 48 89 57 60 8B D0 E8 28 02 00 00" "90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90"
+	%programdata%\PostClear\HelpTool.exe %DLLEDIT% "74 18 48 63 C7 48 8B CE 48 C1 E0 04 48 03 C2 8B D7 48 89 46 60 E8 BB 5B 00 00" "90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90"
 	%windir%\System32\WindowsPowerShell\v1.0\Powershell.exe -executionpolicy remotesigned -Command "& Get-Acl -Path %windir%\System32\control.exe | Set-Acl -Path %DLLEDIT%"
 )
 
@@ -73,18 +73,18 @@ if exist %windir%\zh-CN\explorer.exe.mui (
 )
 schtasks /change /tn "Microsoft\Windows\WindowsUpdate\Scheduled Start" /disable
 %windir%\System32\WindowsPowerShell\v1.0\Powershell.exe -executionpolicy remotesigned -Command "& Get-Acl -Path %windir%\System32\control.exe | Set-Acl -Path '%windir%\System32\Tasks\Microsoft\Windows\WindowsUpdate\Scheduled Start'"
-%programdata%\PostClear\superUser64.exe /wrs %windir%\System32\schtasks.exe /delete /tn Microsoft\Windows\Security\Pwdless\IntelligentPwdlessTask /f
-%programdata%\PostClear\superUser64.exe /wrs %windir%\System32\schtasks.exe /delete /tn "Microsoft\Windows\UpdateOrchestrator\Report policies" /f
-%programdata%\PostClear\superUser64.exe /wrs %windir%\System32\schtasks.exe /delete /tn "Microsoft\Windows\UpdateOrchestrator\Schedule Maintenance Work" /f
-%programdata%\PostClear\superUser64.exe /wrs %windir%\System32\schtasks.exe /delete /tn "Microsoft\Windows\UpdateOrchestrator\Schedule Scan" /f
-%programdata%\PostClear\superUser64.exe /wrs %windir%\System32\schtasks.exe /delete /tn "Microsoft\Windows\UpdateOrchestrator\Schedule Scan Static Task" /f
-%programdata%\PostClear\superUser64.exe /wrs %windir%\System32\schtasks.exe /delete /tn "Microsoft\Windows\UpdateOrchestrator\Schedule Wake To Work" /f
-%programdata%\PostClear\superUser64.exe /wrs %windir%\System32\schtasks.exe /delete /tn "Microsoft\Windows\UpdateOrchestrator\Schedule Work" /f
-%programdata%\PostClear\superUser64.exe /wrs %windir%\System32\schtasks.exe /delete /tn Microsoft\Windows\UpdateOrchestrator\StartOobeAppsScan_LicenseAccepted /f
-%programdata%\PostClear\superUser64.exe /wrs %windir%\System32\schtasks.exe /delete /tn Microsoft\Windows\UpdateOrchestrator\StartOobeAppsScanAfterUpdate /f
-%programdata%\PostClear\superUser64.exe /wrs %windir%\System32\schtasks.exe /delete /tn "Microsoft\Windows\UpdateOrchestrator\Start Oobe Expedite Work" /f
-%programdata%\PostClear\superUser64.exe /wrs %windir%\System32\schtasks.exe /delete /tn Microsoft\Windows\UpdateOrchestrator\USO_UxBroker /f
-%programdata%\PostClear\superUser64.exe /wrs %windir%\System32\schtasks.exe /delete /tn "Microsoft\Windows\UpdateOrchestrator\UUS Failover Task" /f
+%programdata%\PostClear\superUser64.exe /ws %windir%\System32\schtasks.exe /delete /tn Microsoft\Windows\Security\Pwdless\IntelligentPwdlessTask /f
+%programdata%\PostClear\superUser64.exe /ws %windir%\System32\schtasks.exe /delete /tn "Microsoft\Windows\UpdateOrchestrator\Report policies" /f
+%programdata%\PostClear\superUser64.exe /ws %windir%\System32\schtasks.exe /delete /tn "Microsoft\Windows\UpdateOrchestrator\Schedule Maintenance Work" /f
+%programdata%\PostClear\superUser64.exe /ws %windir%\System32\schtasks.exe /delete /tn "Microsoft\Windows\UpdateOrchestrator\Schedule Scan" /f
+%programdata%\PostClear\superUser64.exe /ws %windir%\System32\schtasks.exe /delete /tn "Microsoft\Windows\UpdateOrchestrator\Schedule Scan Static Task" /f
+%programdata%\PostClear\superUser64.exe /ws %windir%\System32\schtasks.exe /delete /tn "Microsoft\Windows\UpdateOrchestrator\Schedule Wake To Work" /f
+%programdata%\PostClear\superUser64.exe /ws %windir%\System32\schtasks.exe /delete /tn "Microsoft\Windows\UpdateOrchestrator\Schedule Work" /f
+%programdata%\PostClear\superUser64.exe /ws %windir%\System32\schtasks.exe /delete /tn Microsoft\Windows\UpdateOrchestrator\StartOobeAppsScan_LicenseAccepted /f
+%programdata%\PostClear\superUser64.exe /ws %windir%\System32\schtasks.exe /delete /tn Microsoft\Windows\UpdateOrchestrator\StartOobeAppsScanAfterUpdate /f
+%programdata%\PostClear\superUser64.exe /ws %windir%\System32\schtasks.exe /delete /tn "Microsoft\Windows\UpdateOrchestrator\Start Oobe Expedite Work" /f
+%programdata%\PostClear\superUser64.exe /ws %windir%\System32\schtasks.exe /delete /tn Microsoft\Windows\UpdateOrchestrator\USO_UxBroker /f
+%programdata%\PostClear\superUser64.exe /ws %windir%\System32\schtasks.exe /delete /tn "Microsoft\Windows\UpdateOrchestrator\UUS Failover Task" /f
 
 title Applying GroupPolicy
 %programdata%\PostClear\LGPO.exe /m %programdata%\PostClear\GPM.pol
@@ -121,11 +121,22 @@ powercfg /change monitor-timeout-dc 5
 powercfg /change standby-timeout-ac 0
 powercfg /change standby-timeout-dc 0
 
+title Copy WordPad
+xcopy /y /e %programdata%\PostClear\WordPad "%programfiles%\Windows NT\Accessories"
+rd /s /q %programdata%\PostClear\WordPad
+if exist %windir%\ru-RU\explorer.exe.mui (
+	rd /s /q "%programfiles%\Windows NT\Accessories\en-US"
+) else (
+	rd /s /q "%programfiles%\Windows NT\Accessories\ru-RU"
+)
+
 title Shortcuts
 if exist %windir%\ru-RU\explorer.exe.mui (
+	set gpedit=Групповые политики
 	set oldcalc=Калькулятор
 	set oldnote=Блокнот
 ) else (
+	set gpedit=Group Policies
 	set oldcalc=Calculator
 	set oldnote=Notepad
 )
@@ -133,8 +144,10 @@ if exist %programdata%\PostClear\WinHelp.html (
 	%programdata%\PostClear\HelpTool.exe %programdata%\PostClear\WinHelp.html "%programdata%\Microsoft\Windows\Start Menu\Programs\System Tools\WinHelp.lnk"
 )
 %programdata%\PostClear\HelpTool.exe %programdata%\PostClear\WinTool.exe "%programdata%\Microsoft\Windows\Start Menu\Programs\System Tools\WinTool.lnk"
+%programdata%\PostClear\HelpTool.exe "%windir%\system32\gpedit.msc" "%programdata%\Microsoft\Windows\Start Menu\Programs\Administrative Tools\%gpedit%.lnk"
 %programdata%\PostClear\HelpTool.exe %windir%\System32\calc.exe "%programdata%\Microsoft\Windows\Start Menu\Programs\Accessories\%oldcalc%.lnk"
 %programdata%\PostClear\HelpTool.exe %windir%\system32\notepad.exe "%programdata%\Microsoft\Windows\Start Menu\Programs\Accessories\%oldnote%.lnk"
+%programdata%\PostClear\HelpTool.exe "%programfiles%\Windows NT\Accessories\wordpad.exe" "%programdata%\Microsoft\Windows\Start Menu\Programs\Accessories\WordPad.lnk"
 %programdata%\PostClear\HelpTool.exe %windir%\System32\WindowsPowerShell\v1.0\powershell.exe "%programdata%\Microsoft\Windows\Start Menu\Programs\System Tools\Windows PowerShell.lnk" %windir%
 %programdata%\PostClear\HelpTool.exe %windir%\System32\WindowsPowerShell\v1.0\powershell_ise.exe "%programdata%\Microsoft\Windows\Start Menu\Programs\System Tools\Windows PowerShell ISE.lnk"
 %programdata%\PostClear\HelpTool.exe "%programfiles(x86)%\Microsoft\Edge\Application\msedge.exe" "%programdata%\Microsoft\Windows\Start Menu\Programs\Microsoft Edge.lnk"
@@ -144,8 +157,8 @@ title Remove protect
 set KEYSLIST=Launcher.AllAppsDesktopApplication Launcher.Computer Launcher.DesktopPackagedApplication Launcher.ImmersiveApplication Launcher.SystemSettings IE.AssocFile.WEBSITE Microsoft.Website
 for %%a in (%KEYSLIST%) do (
 	reg export HKEY_CLASSES_ROOT\%%a\shellex\ContextMenuHandlers %programdata%\PostClear\_temp.reg /y
-	%programdata%\PostClear\superUser64.exe /wrs %windir%\System32\reg.exe delete HKEY_CLASSES_ROOT\%%a\shellex\ContextMenuHandlers /f
-	%programdata%\PostClear\superUser64.exe /wrs %programdata%\PostClear\HelpTool.exe HKC %%a\shellex "S-1-5-18|S-1-5-32-544|S-1-5-32-545"
+	%programdata%\PostClear\superUser64.exe /ws %windir%\System32\reg.exe delete HKEY_CLASSES_ROOT\%%a\shellex\ContextMenuHandlers /f
+	%programdata%\PostClear\superUser64.exe /ws %programdata%\PostClear\HelpTool.exe HKC %%a\shellex "S-1-5-18|S-1-5-32-544|S-1-5-32-545"
 	reg import %programdata%\PostClear\_temp.reg
 	del /f /q %programdata%\PostClear\_temp.reg
 )
@@ -155,7 +168,7 @@ title Start RasMan service
 net start RasMan
 
 title Applying PostClearM.reg
-%programdata%\PostClear\superUser64.exe /wrs %windir%\System32\reg.exe import %programdata%\PostClear\PostClearM.reg
+%programdata%\PostClear\superUser64.exe /ws %windir%\System32\reg.exe import %programdata%\PostClear\PostClearM.reg
 del /f /q %programdata%\PostClear\superUser64.exe
 del /f /q %programdata%\PostClear\PostClearM.reg
 
@@ -164,10 +177,10 @@ sc delete edgeupdate
 sc delete edgeupdatem
 
 title Edge location
-mklink /j "%programfiles(x86)%\Microsoft\EdgeCore\100.0.1185.36" "%programfiles(x86)%\Microsoft\Edge\Application\100.0.1185.36"
-mklink /j "%programfiles(x86)%\Microsoft\EdgeWebView\Application\100.0.1185.36" "%programfiles(x86)%\Microsoft\Edge\Application\100.0.1185.36"
+mklink /j "%programfiles(x86)%\Microsoft\EdgeCore\122.0.2365.106" "%programfiles(x86)%\Microsoft\Edge\Application\122.0.2365.106"
+mklink /j "%programfiles(x86)%\Microsoft\EdgeWebView\Application\122.0.2365.106" "%programfiles(x86)%\Microsoft\Edge\Application\122.0.2365.106"
 reg add HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate\Clients\{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062} /v location /t REG_SZ /d "%programfiles(x86)%\Microsoft\Edge\Application"
 reg add HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate\Clients\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5} /v location /t REG_SZ /d "%programfiles(x86)%\Microsoft\EdgeWebView\Application"
-reg add HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate\ClientState\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5} /v EBWebView /t REG_SZ /d "%programfiles(x86)%\Microsoft\EdgeWebView\Application\100.0.1185.36"
+reg add HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate\ClientState\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5} /v EBWebView /t REG_SZ /d "%programfiles(x86)%\Microsoft\EdgeWebView\Application\122.0.2365.106"
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Microsoft Edge" /v InstallLocation /t REG_SZ /d "%programfiles(x86)%\Microsoft\Edge\Application"
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Microsoft EdgeWebView" /v InstallLocation /t REG_SZ /d "%programfiles(x86)%\Microsoft\EdgeWebView\Application"
