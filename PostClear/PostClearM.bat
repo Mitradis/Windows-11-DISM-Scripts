@@ -1,15 +1,6 @@
 title Contex menu and disable Start
 %programdata%\PostClear\WinTool.exe -setup=8191
 
-title Editing .dll
-set DLLEDIT=%windir%\System32\InputSwitch.dll
-if not exist %windir%\zh-CN\explorer.exe.mui (
-	takeown /f %DLLEDIT%
-	icacls %DLLEDIT% /grant "%username%":f /c /l /q
-	%programdata%\PostClear\HelpTool.exe %DLLEDIT% "74 18 48 63 C7 48 8B CE 48 C1 E0 04 48 03 C2 8B D7 48 89 46 60 E8 BB 5B 00 00" "90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90"
-	%windir%\System32\WindowsPowerShell\v1.0\Powershell.exe -executionpolicy remotesigned -Command "& Get-Acl -Path %windir%\System32\control.exe | Set-Acl -Path %DLLEDIT%"
-)
-
 title Deleting tasks
 schtasks /delete /tn Microsoft\XblGameSave\XblGameSaveTask /f
 schtasks /delete /tn "Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser" /f
@@ -73,7 +64,6 @@ if exist %windir%\zh-CN\explorer.exe.mui (
 )
 schtasks /change /tn "Microsoft\Windows\WindowsUpdate\Scheduled Start" /disable
 %windir%\System32\WindowsPowerShell\v1.0\Powershell.exe -executionpolicy remotesigned -Command "& Get-Acl -Path %windir%\System32\control.exe | Set-Acl -Path '%windir%\System32\Tasks\Microsoft\Windows\WindowsUpdate\Scheduled Start'"
-%programdata%\PostClear\superUser64.exe /ws %windir%\System32\schtasks.exe /delete /tn Microsoft\Windows\Security\Pwdless\IntelligentPwdlessTask /f
 %programdata%\PostClear\superUser64.exe /ws %windir%\System32\schtasks.exe /delete /tn "Microsoft\Windows\UpdateOrchestrator\Report policies" /f
 %programdata%\PostClear\superUser64.exe /ws %windir%\System32\schtasks.exe /delete /tn "Microsoft\Windows\UpdateOrchestrator\Schedule Maintenance Work" /f
 %programdata%\PostClear\superUser64.exe /ws %windir%\System32\schtasks.exe /delete /tn "Microsoft\Windows\UpdateOrchestrator\Schedule Scan" /f
@@ -84,6 +74,7 @@ schtasks /change /tn "Microsoft\Windows\WindowsUpdate\Scheduled Start" /disable
 %programdata%\PostClear\superUser64.exe /ws %windir%\System32\schtasks.exe /delete /tn Microsoft\Windows\UpdateOrchestrator\StartOobeAppsScanAfterUpdate /f
 %programdata%\PostClear\superUser64.exe /ws %windir%\System32\schtasks.exe /delete /tn "Microsoft\Windows\UpdateOrchestrator\Start Oobe Expedite Work" /f
 %programdata%\PostClear\superUser64.exe /ws %windir%\System32\schtasks.exe /delete /tn Microsoft\Windows\UpdateOrchestrator\USO_UxBroker /f
+%programdata%\PostClear\superUser64.exe /ws %windir%\System32\schtasks.exe /delete /tn Microsoft\Windows\UpdateOrchestrator\UIEOrchestrator /f
 %programdata%\PostClear\superUser64.exe /ws %windir%\System32\schtasks.exe /delete /tn "Microsoft\Windows\UpdateOrchestrator\UUS Failover Task" /f
 
 title Applying GroupPolicy
