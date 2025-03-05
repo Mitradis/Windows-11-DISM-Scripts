@@ -112,15 +112,6 @@ powercfg /change monitor-timeout-dc 5
 powercfg /change standby-timeout-ac 0
 powercfg /change standby-timeout-dc 0
 
-title Copy WordPad
-xcopy /y /e %programdata%\PostClear\WordPad "%programfiles%\Windows NT\Accessories"
-rd /s /q %programdata%\PostClear\WordPad
-if exist %windir%\ru-RU\explorer.exe.mui (
-	rd /s /q "%programfiles%\Windows NT\Accessories\en-US"
-) else (
-	rd /s /q "%programfiles%\Windows NT\Accessories\ru-RU"
-)
-
 title Shortcuts
 if exist %windir%\ru-RU\explorer.exe.mui (
 	set gpedit=Групповые политики

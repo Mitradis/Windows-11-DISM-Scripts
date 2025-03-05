@@ -147,6 +147,14 @@ if exist Z:\Install\Windows\zh-CN\explorer.exe.mui (
 )
 rd /s /q Z:\Calc
 
+title Copy WordPad
+if exist Z:\Install\Windows\ru-RU\explorer.exe.mui (
+	rd /s /q "Z:\WordPad\en-US"
+) else (
+	rd /s /q "Z:\WordPad\ru-RU"
+)
+move Z:\WordPad "Z:\Install\Program Files\Windows NT\Accessories"
+
 title GameDVR
 move Z:\KnownGameList.bin Z:\Install\Windows\bcastdvr
 
