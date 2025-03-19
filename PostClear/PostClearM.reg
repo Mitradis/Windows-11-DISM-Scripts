@@ -52,6 +52,9 @@ Windows Registry Editor Version 5.00
 ; Служба демонстрации магазина
 [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\RetailDemo]
 "Start"=dword:00000004
+; Служба инвентаризации и оценки совместимости
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\InventorySvc]
+"Start"=dword:00000004
 ; Служба истории файлов
 [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\fhsvc]
 "Start"=dword:00000004
