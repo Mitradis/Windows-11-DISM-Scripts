@@ -113,7 +113,7 @@ set DELETELIST=Z:\Install\Windows\System32\OneDriveSetup.exe Z:\Install\Windows\
 title Add WaaS
 set DELETELIST=%DELETELIST% Z:\Install\Windows\WinSxS\FileMaps\$$_waas_regkeys_dbffc348a6fab71c.cdf-ms Z:\Install\Windows\WinSxS\FileMaps\$$_waas_services_ddfc4ae175ff1678.cdf-ms Z:\Install\Windows\WaaS\regkeys Z:\Install\Windows\WaaS\services Z:\Install\Windows\WaaS
 title Add UPFC
-set DELETELIST=%DELETELIST% Z:\Install\Windows\System32\upfc.exe Z:\Install\Windows\WinSxS\Manifests\amd64_microsoft-windows-upfc_31bf3856ad364e35_10.0.26100.1150_none_430cd619cc4d0de3.manifest Z:\Install\Windows\WinSxS\Manifests\amd64_microsoft-windows-upfc_31bf3856ad364e35_10.0.26100.3037_none_431509c5cc476cf9.manifest Z:\Install\Windows\WinSxS\amd64_microsoft-windows-upfc_31bf3856ad364e35_10.0.26100.3037_none_431509c5cc476cf9
+set DELETELIST=%DELETELIST% Z:\Install\Windows\System32\upfc.exe Z:\Install\Windows\WinSxS\Manifests\amd64_microsoft-windows-upfc_31bf3856ad364e35_10.0.26100.1150_none_430cd619cc4d0de3.manifest Z:\Install\Windows\WinSxS\Manifests\amd64_microsoft-windows-upfc_31bf3856ad364e35_10.0.26100.3323_none_42f3f4d7cc6040f1.manifest Z:\Install\Windows\WinSxS\amd64_microsoft-windows-upfc_31bf3856ad364e35_10.0.26100.3323_none_42f3f4d7cc6040f1
 title Add calc
 set DELETELIST=%DELETELIST% Z:\Install\Windows\System32\calc.exe Z:\Install\Windows\SysWOW64\calc.exe Z:\Install\Windows\WinSxS\Manifests\amd64_microsoft-windows-calc_31bf3856ad364e35_10.0.26100.1_none_a6b1a99b83489282.manifest Z:\Install\Windows\WinSxS\Manifests\amd64_microsoft-windows-calc_31bf3856ad364e35_10.0.26100.1882_none_455c758bcadc235e.manifest Z:\Install\Windows\WinSxS\Manifests\wow64_microsoft-windows-calc_31bf3856ad364e35_10.0.26100.1_none_b10653edb7a9547d.manifest Z:\Install\Windows\WinSxS\Manifests\wow64_microsoft-windows-calc_31bf3856ad364e35_10.0.26100.1882_none_4fb11fddff3ce559.manifest Z:\Install\Windows\WinSxS\amd64_microsoft-windows-calc_31bf3856ad364e35_10.0.26100.1_none_a6b1a99b83489282 Z:\Install\Windows\WinSxS\amd64_microsoft-windows-calc_31bf3856ad364e35_10.0.26100.1882_none_455c758bcadc235e Z:\Install\Windows\WinSxS\wow64_microsoft-windows-calc_31bf3856ad364e35_10.0.26100.1_none_b10653edb7a9547d Z:\Install\Windows\WinSxS\wow64_microsoft-windows-calc_31bf3856ad364e35_10.0.26100.1882_none_4fb11fddff3ce559
 title Add GameDVR
@@ -153,7 +153,8 @@ if exist Z:\Install\Windows\ru-RU\explorer.exe.mui (
 ) else (
 	rd /s /q "Z:\WordPad\ru-RU"
 )
-move Z:\WordPad "Z:\Install\Program Files\Windows NT\Accessories"
+xcopy /s Z:\WordPad "Z:\Install\Program Files\Windows NT\Accessories"
+rd /s /q Z:\WordPad
 
 title GameDVR
 move Z:\KnownGameList.bin Z:\Install\Windows\bcastdvr
@@ -177,7 +178,7 @@ del /f /q Z:\WimOptimize.exe
 
 title Copy PostClear
 if not exist Z:\Install\Windows\ru-RU\explorer.exe.mui (
-	del /f /q Z:\PostClear\WinHelp.html
+	del /f /q Z:\PostClear\WinTool.html
 )
 move Z:\PostClear Z:\Install\ProgramData\PostClear
 
