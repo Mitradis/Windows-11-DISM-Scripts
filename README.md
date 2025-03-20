@@ -20,10 +20,10 @@ The work of the set is divided into 2 stages:
 - Набор работает только на Windows 10\11. Должны быть все права администратора. Необязательно, но на время выполнения, рекомендуется отключить мониторинг у антивирусов. Понадобиться любой диск (если RAM, то нужна поддержка NTFS DISM команд, SoftPerfect RAM Disk и аналоги) с буквой Z размером не менее 14000МБ.
 - Скачать указанные в Релизе нужный образ и .rar архив. Образ должен быть смонтирован, но не находится на диске Z, если диск минимального размера.
 - Распаковать скрипты, файлы install.wim и boot.wim (из папки source файла .iso) в корень диска Z.
-- Скачать StartAllBack\Start11 и поместить его в Z:\PostClear под именем CustomStart.exe (по умолчанию скрипты рассчитаны на репак StartAllBack с ключом установки /S).
+- Скачать StartAllBack и поместить его в Z:\PostClear под именем CustomStart.exe (по умолчанию скрипты рассчитаны на репак StartAllBack с ключом установки /S).
 - В случае отличия языка системы от русского, заменить в _Clear.bat «ru-RU», в блоке OneDrive, на свою версию.
 - Запустить _Clear.bat и ожидать завершение работы окна.
-- Убедится в отсутствии ошибок в файле Clear.log по поиску: «операция», «оши», «не », «нет» (не все строчки являются ошибками, внимательно читайте их описание).
+- Убедится в отсутствии ошибок в файле Clear.log по поиску: «отказано», «операция», «оши», «не », «нет» (не все строчки являются ошибками, внимательно читайте их описание).
 - Запустить CMD и выполнить первую команду из файла _Readme.txt.
 - С помощью UltraISO (или аналогов) удалить в .iso образе файл install.wim и добавить получившийся install.esd и boot.wim.
 - Образ готов.  
@@ -33,10 +33,10 @@ The work of the set is divided into 2 stages:
 - The set only works on Windows 10\11. Must have full administrator rights. Optional, but for the duration of execution, it is recommended to disable antivirus monitoring. You will need any disk (if RAM, then you need support for NTFS DISM commands, SoftPerfect RAM Disk and analogues) with the letter Z and a size of at least 14000MB.
 - Download the required image and .rar archive specified in the Release. The image must be mounted, but not located on the Z drive if the drive is the minimum size.
 - Unpack the scripts, install.wim and boot.wim files (from the source folder of the .iso file) to the root of the Z drive.
-- Download StartAllBack\Start11 and place it in Z:\PostClear under the name CustomStart.exe (By default, the scripts are designed for the StartAllBack repack with the installation key /S).
+- Download StartAllBack and place it in Z:\PostClear under the name CustomStart.exe (By default, the scripts are designed for the StartAllBack repack with the installation key /S).
 - If the system language differs from Russian, replace “ru-RU” in _Clear.bat, in the OneDrive block, with your version.
 - Run _Clear.bat and wait for the window to finish.
-- Make sure there are no errors in the Clear.log file by searching: “operation”, “errors”, “not”, “no” (not all lines are errors, read their description carefully).
+- Make sure there are no errors in the Clear.log file by searching: “denied”, “operation”, “errors”, “not”, “no” (not all lines are errors, read their description carefully).
 - Launch CMD and execute the first command from the _Readme.txt file.
 - Using UltraISO (or analogues), delete the install.wim file in the .iso image and add the resulting install.esd and boot.wim.
 - The image is ready.
@@ -45,10 +45,10 @@ The work of the set is divided into 2 stages:
 - 该套件仅适用于 Windows 10\11。 必须具有完整的管理员权限。 可选，但在执行期间，建议禁用防病毒监控。 您将需要任何带有字母 Z 且大小至少为 14000MB 的磁盘（如果是 RAM，则需要支持 NTFS DISM 命令、SoftPerfect RAM 磁盘和类似磁盘）。
 - 下载版本中指定的所需图像和 .rar 存档。 如果驱动器是最小大小，则必须安装映像，但不能将映像定位在 Z 驱动器上。
 - 将脚本、install.wim 和 boot.wim 文件（来自 .iso 文件的源文件夹）解压到 Z 驱动器的根目录。
-- 下载 StartAllBack\Start11 并将其放置在 Z:\PostClear 中，名称为 CustomStart.exe（默认情况下，脚本是为使用安装密钥 /S 进行 StartAllBack 重新打包而设计的）。
-- 如果系统语言与俄语不同，请将 OneDrive 块中 _Clear.bat 中的“ru-RU”替换为您的版本。
+- 下载 StartAllBack 并将其放置在 Z:\PostClear 中，名称为 CustomStart.exe（默认情况下，脚本是为使用安装密钥 /S 进行 StartAllBack 重新打包而设计的）。
+- 如果系统语言与俄语不同，请将 OneDrive 块中 _Clear.bat 中的 “ru-RU” 替换为您的版本。
 - 运行 _Clear.bat 并等待窗口完成。
-- 通过搜索“operation”、“errors”、“not”、“no”确保 Clear.log 文件中没有错误（并非所有行都是错误，请仔细阅读其描述）。
+- 通过搜索 “denied”, “operation”、“errors”、“not”、“no” 确保 Clear.log 文件中没有错误（并非所有行都是错误，请仔细阅读其描述）。
 - 启动 CMD 并执行 _Readme.txt 文件中的第一个命令。
 - 使用 UltraISO（或类似工具），删除 .iso 映像中的 install.wim 文件并添加生成的 install.esd 和 boot.wim。
 - 图像已准备好。
