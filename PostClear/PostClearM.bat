@@ -1,4 +1,4 @@
-title Contex menu and disable Start
+title WinTool processing
 %programdata%\PostClear\WinTool.exe -setup=8191
 
 title Deleting tasks
