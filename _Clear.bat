@@ -5,30 +5,35 @@ call :Clear>>Z:\Clear.log 2>&1
 EXIT /b 0
 :Clear
 
-title Mount boot.wim
-mkdir Z:\boot
-dism /mount-image /imagefile:Z:\boot.wim /index:2 /mountdir:Z:\boot
-
-title Load registry
-reg load HKEY_LOCAL_MACHINE\WIM_BOOT Z:\boot\Windows\System32\config\SYSTEM
-
-title Disable TPM check
-reg add HKEY_LOCAL_MACHINE\WIM_BOOT\Setup\LabConfig /v BypassCPUCheck /t REG_DWORD /d 1
-reg add HKEY_LOCAL_MACHINE\WIM_BOOT\Setup\LabConfig /v BypassTPMCheck /t REG_DWORD /d 1
-reg add HKEY_LOCAL_MACHINE\WIM_BOOT\Setup\LabConfig /v BypassRAMCheck /t REG_DWORD /d 1
-reg add HKEY_LOCAL_MACHINE\WIM_BOOT\Setup\LabConfig /v BypassSecureBootCheck /t REG_DWORD /d 1
-
-title Unload registry
-reg unload HKEY_LOCAL_MACHINE\WIM_BOOT
-
-title Unmount boot.wim
-dism /unmount-wim /mountdir:Z:\boot /commit
-
-title Compress boot.wim
 if exist Z:\boot.wim (
+	title Mount boot.wim
+	mkdir Z:\boot
+	dism /mount-image /imagefile:Z:\boot.wim /index:2 /mountdir:Z:\boot
+	
+	title Load registry
+	reg load HKEY_LOCAL_MACHINE\WIM_BOOT Z:\boot\Windows\System32\config\SYSTEM
+	reg load HKEY_LOCAL_MACHINE\WIM_DEFAULT Z:\boot\Windows\System32\config\DEFAULT
+	
+	title Disable TPM check
+	reg add HKEY_LOCAL_MACHINE\WIM_BOOT\Setup\LabConfig /v BypassCPUCheck /t REG_DWORD /d 1
+	reg add HKEY_LOCAL_MACHINE\WIM_BOOT\Setup\LabConfig /v BypassTPMCheck /t REG_DWORD /d 1
+	reg add HKEY_LOCAL_MACHINE\WIM_BOOT\Setup\LabConfig /v BypassRAMCheck /t REG_DWORD /d 1
+	reg add HKEY_LOCAL_MACHINE\WIM_BOOT\Setup\LabConfig /v BypassSecureBootCheck /t REG_DWORD /d 1
+	
+	title Disable Mouse acceleration
+	reg add "HKEY_LOCAL_MACHINE\WIM_DEFAULT\Control Panel\Mouse" /v MouseSpeed /t REG_DWORD /d 0 /f
+	reg add "HKEY_LOCAL_MACHINE\WIM_DEFAULT\Control Panel\Mouse" /v MouseThreshold1 /t REG_DWORD /d 0 /f
+	reg add "HKEY_LOCAL_MACHINE\WIM_DEFAULT\Control Panel\Mouse" /v MouseThreshold2 /t REG_DWORD /d 0 /f
+	
+	title Unload registry
+	reg unload HKEY_LOCAL_MACHINE\WIM_BOOT
+	reg unload HKEY_LOCAL_MACHINE\WIM_DEFAULT
+	
+	title Unmount boot.wim
+	dism /unmount-wim /mountdir:Z:\boot /commit
+	
+	title Compress boot.wim
 	Z:\WimOptimize.exe Z:\boot.wim
-) else (
-	del /f /q Z:\boot.wim
 )
 
 title Applying _Clear.ps1
